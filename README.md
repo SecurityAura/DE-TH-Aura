@@ -1,5 +1,11 @@
 # DE-TH-Aura
-Repository where I hold random detection and threat hunting queries that I come up with based on different sources of information (or even inspiration).
+Repository where I hold random detection and threat hunting queries that I come up with based on different sources of information (or even inspiration). These sources can be:
+
+- Tweets
+- Blog posts
+- Research articles
+- Random thoughts
+- Stuff I come across in my day-to-day work
 
 Most of the queries in this repository will be in KQL (Microsoft Sentinel, Microsoft Defender XDR). At some point, I would like to add some pseudo-code using Sigma but for now, it'll be KQL only.
 
