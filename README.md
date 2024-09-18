@@ -10,3 +10,7 @@ Repository where I hold random detection and threat hunting queries that I come 
 Most of the queries in this repository will be in KQL (Microsoft Sentinel, Microsoft Defender XDR). At some point, I would like to add some pseudo-code using Sigma but for now, it'll be KQL only.
 
 As of 2024/08/05, since I'm on paternity leave, this repo will be organized in a way that I see fit which means ... it may be all over the place. However, as I add more detection, queries, etc. I'll try to organize it in a way that makes it easier to navigate and find stuff.
+
+The template used to create the various pages in this repo comes from Bert-JanP Hunting-Queries-Detection-Rules repo! Make sure to give it a star and follow it!
+
+https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules/blob/main/DetectionTemplate.md
