@@ -21,7 +21,8 @@ This rule detects either step in a chain of three (3) commands used to manipulat
 - PowerShell to change the system date/time
 
 #### Risk
-Explain what risk this detection tries to cover
+
+A threat actor is attempting to change the system time of an endpoint which could allow it to use the Retrosigned Drivers EDR Bypass.
 
 #### Author <Optional>
 - **Name:** SecurityAura
