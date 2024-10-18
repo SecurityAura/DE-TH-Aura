@@ -11,7 +11,7 @@ It'll give you a list of unique files, based on their path, that were involved i
 A list of IP addresses that you identified as being malicious, suspicious and/or of interest.
 
 ## Microsoft Sentinel
-### Query - SharePoint/OneDrive files involved in Operations from flagged IPs.
+### Query #1 - SharePoint/OneDrive files involved in Operations from flagged IPs.
 ```KQL
 let FlaggedIPs = dynamic([
     "1.1.1.1",
