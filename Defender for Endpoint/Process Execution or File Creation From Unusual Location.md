@@ -25,14 +25,14 @@ This rule detects when a file gets created and/or process executed out of the fo
 - C:\Program Files - Root
 - C:\Program Files (x86) - Root
 - C:\Users\Public - Recursive
-- C:\Users\* - Root
-- C:\Users\*\AppData - Root
-- C:\Users\*\AppData\Local - Root
-- C:\Users\*\AppData\Roaming - Root
-- C:\Users\*\Favorites - Recursive
-- C:\Users\*\Music - Recursive
-- C:\Users\*\Pictures - Recursive
-- C:\Users\*\Videos - Recursive
+- C:\Users\\* - Root
+- C:\Users\\*\AppData - Root
+- C:\Users\\*\AppData\Local - Root
+- C:\Users\\*\AppData\Roaming - Root
+- C:\Users\\*\Favorites - Recursive
+- C:\Users\\*\Music - Recursive
+- C:\Users\\*\Pictures - Recursive
+- C:\Users\\*\Videos - Recursive
 
 A lot of threat actors will end up dropping their binaries and/or files at the root of C:\ProgramData and/or C:\Users\Public. So if you have to prioritize locations, pick these two.
 
