@@ -43,7 +43,7 @@ DeviceProcessEvents
 | where ProcessCommandLine has_all ("start","backup")
 | where ProcessCommandLine has_any ("ntds.dit","SYSTEM","SECURITY","SAM")
 ```
-## Sentinel
+## Microsoft Sentinel
 ```KQL
 DeviceProcessEvents
 | where FileName =~ "wbadmin.exe"
