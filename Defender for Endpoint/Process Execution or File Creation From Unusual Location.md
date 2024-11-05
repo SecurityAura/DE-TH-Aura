@@ -73,7 +73,7 @@ DeviceProcessEvents
     or FolderPath matches regex @"(?i)C\:\\Users\\[^\\]+\\Pictures\\(.*)?"
     or FolderPath matches regex @"(?i)C\:\\Users\\[^\\]+\\Videos\\(.*)?"
 ```
-## Sentinel - Query #1 - DeviceProcessEvents
+## Microsoft Sentinel - Query #1 - DeviceProcessEvents
 ```KQL
 DeviceProcessEvents
 | where FolderPath matches regex @'(?i)C\:\\[^\\]+$'
@@ -111,7 +111,7 @@ DeviceFileEvents
     or FolderPath matches regex @"(?i)C\:\\Users\\[^\\]+\\Pictures\\(.*)?"
     or FolderPath matches regex @"(?i)C\:\\Users\\[^\\]+\\Videos\\(.*)?"
 ```
-## Sentinel - Query #2 - DeviceFileEvents
+## Microsoft Sentinel - Query #2 - DeviceFileEvents
 ```KQL
 DeviceFileEvents
 | where FolderPath matches regex @'(?i)C\:\\[^\\]+$'
