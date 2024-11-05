@@ -44,7 +44,7 @@ DeviceProcessEvents
     or FileName =~ "w32tm.exe" and ProcessCommandLine has ("unregister")
     or FileName in~ ("powershell.exe","pwsh.exe") and ProcessCommandLine has ("Set-Date")
 ```
-## Sentinel
+## Microsoft Sentinel
 ```KQL
 DeviceProcessEvents
 | where FileName in~ ("net.exe","net1.exe") and ProcessCommandLine has_all ("stop","w32time")
