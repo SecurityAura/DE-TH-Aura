@@ -44,7 +44,6 @@ let SuspiciousWorkstationNameStrings = dynamic([
 DeviceLogonEvents
 | where RemoteDeviceName has_any (SuspiciousWorkstationNameStrings)
 ```
-## Defender XDR ##
 ### Query 2 - Defender for Identity (MDI) via IdentityLogonEvents ###
 ```KQL
 let SuspiciousWorkstationNameStrings = dynamic([
