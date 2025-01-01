@@ -1,5 +1,11 @@
 # DE-TH-Aura
 
+*As of 2025/01/01, a new folder was added for my #100DaysOfKQL challenge. Queries from this challenge will be added there and at some point, after the challenge ends, I'll move them around in the repo in their appropriate sections.
+
+For more information about my #100DaysOfKQL challenge, see the following Twitter thread:
+
+https://x.com/SecurityAura/status/1874454346324410878
+
 *As of 2024/08/05, since I'm on paternity leave, this repo will be organized in a way that I see fit which means ... it may be all over the place. However, as I add more detection, queries, etc. I'll try to organize it in a way that makes it easier to navigate and find stuff.*
 
 Repository where I hold random detection and threat hunting queries that I come up with based on different sources of information (or even inspiration). These sources can be:
