@@ -33,7 +33,7 @@ Depending on your environment, these queries can be used to look for remote inte
 
 - Defender for Endpoint (MDE) - 1 query (3 variants)
 - Defender for Identity (MDI) - 1 query (3 variants)
-- Microsoft Sentinel (SecurityEvent) - 2 queries (3 variants each)
+- Microsoft Sentinel (SecurityEvent, Microsoft-Windows-TerminalServices-LocalSessionManager) - 2 queries (3 variants each)
 
 ## Defender XDR ##
 ### Query 1 - Defender for Endpoint (MDE) via DeviceLogonEvents ###
