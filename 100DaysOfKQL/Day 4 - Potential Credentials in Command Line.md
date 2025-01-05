@@ -1,4 +1,4 @@
-# *Day 4 - Potential Cleartext Credentials in Command Line*
+# *Potential Cleartext Credentials in Command Line*
 
 ## Query Information
 
