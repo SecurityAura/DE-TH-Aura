@@ -24,6 +24,8 @@ More processes may return false positives (e.g.: Chromium-based processes). Simp
 - **Name:** SecurityAura
 - **Github:** https://github.com/SecurityAura
 - **Twitter:** https://x.com/SecurityAura
+- **BlueSky:** https://bsky.app/profile/securityaura.bsky.social
+- **Mastodon (InfoSec.Exchange):** https://infosec.exchange/@SecurityAura
 - **LinkedIn:** Coming Soon!
 - **Website:** https://medium.com/@securityaura
 
