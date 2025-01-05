@@ -24,6 +24,8 @@ The caveat of this query is that, if the environment doesn't have a standardized
 - **Name:** SecurityAura
 - **Github:** https://github.com/SecurityAura
 - **Twitter:** https://x.com/SecurityAura
+- **BlueSky:** https://bsky.app/profile/securityaura.bsky.social
+- **Mastodon (InfoSec.Exchange):** https://infosec.exchange/@SecurityAura
 - **LinkedIn:** Coming Soon!
 - **Website:** https://medium.com/@securityaura
 
