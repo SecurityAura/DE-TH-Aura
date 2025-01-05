@@ -32,7 +32,7 @@ More processes may return false positives (e.g.: Chromium-based processes). Simp
 - Defender for Endpoint (MDE) - 1 query
 
 ## Defender XDR ##
-### Defender for Endpoint (MDE) via DeviceProcess ###
+### Defender for Endpoint (MDE) via DeviceProcessEvents ###
 ```KQL
 // Excluding known false positive processes
 let ExcludedProcesses = dynamic([
@@ -70,7 +70,7 @@ DeviceProcessEvents
 //| distinct ProcessCommandLine
 ```
 ## Microsoft Sentinel ##
-### Defender for Endpoint (MDE) via DeviceProcess ###
+### Defender for Endpoint (MDE) via DeviceProcessEvents ###
 ```KQL
 // Excluding known false positive processes
 let ExcludedProcesses = dynamic([
