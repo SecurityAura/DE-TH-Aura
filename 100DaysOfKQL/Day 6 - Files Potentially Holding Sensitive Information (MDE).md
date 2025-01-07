@@ -1,4 +1,4 @@
-# *Files Potentially Holding Sensitive Information*
+# *Files Potentially Holding Sensitive Information (MDE)*
 
 ## Query Information
 
