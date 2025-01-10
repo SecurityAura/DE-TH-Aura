@@ -24,6 +24,8 @@ Bert Jan P - https://kqlquery.com/ - @BertJanCyber
 
 Mehmet Ergene - https://academy.bluraven.io/blog (previously https://posts.bluraven.io/)- @Cyb3rMonk
 
+Matt Zorich - https://learnsentinel.blog/ - @reprise_99
+
 Invictus IR - https://www.invictus-ir.com/news - @InvictusIR
 
 Dylan - https://attackthesoc.com/posts/ - @AttackTheSOC
