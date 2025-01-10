@@ -1,6 +1,8 @@
+# Description
+
 2025/01/09 - Simple list of people who I know share a lot of Microsoft Defender stack-related content and/or KQL content. Trying to have a list of people to follow, but mostly their websites/blogs, that can be shared so that people can watch for new publications and learn about all the cool stuff that can be done with Defender/KQL.
 
-Defender Stack focused:
+## Defender Stack focused
 
 Ru Campbell - https://campbell.scot/ - @rucam365
 
@@ -16,7 +18,7 @@ Alex Verboon - https://www.verboon.info/ - @alexverboon
 
 Michalis Michalos - https://www.michalos.net/ - @Cyb3rMik3
 
-KQL and others focused:
+## KQL and others focused
 
 Bert Jan P - https://kqlquery.com/ - @BertJanCyber
 
