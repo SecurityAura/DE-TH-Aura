@@ -28,4 +28,4 @@ Matt Zorich - https://learnsentinel.blog/ - @reprise_99
 
 Invictus IR - https://www.invictus-ir.com/news - @InvictusIR
 
-Dylan - https://attackthesoc.com/posts/ - @AttackTheSOC
+Dylan - https://attackthesoc.com/posts/ - @DylanInfosec
