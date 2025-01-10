@@ -1,4 +1,4 @@
-# *Day 8 - Silent cmd.exe Execution With Redirected STDERR & STDOUT.md*
+# *Silent cmd.exe Execution With Redirected STDERR & STDOUT.md*
 
 ## Query Information
 
