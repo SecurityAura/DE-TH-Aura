@@ -35,7 +35,7 @@ PS: These queries only focus on one aspect of a suspicious inbox rule: the name.
 
 ### Queries Overview ###
 
-- Microsoft Defender for Cloud Apps - 1 query
+- Microsoft Defender for Cloud Apps (MCAS) - 1 query
 - Microsoft Sentinel - OfficeActivity (via Microsoft 365) - 1 query
 
 ## Defender XDR ##
