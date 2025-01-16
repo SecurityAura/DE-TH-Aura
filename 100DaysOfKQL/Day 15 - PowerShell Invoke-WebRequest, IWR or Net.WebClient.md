@@ -46,6 +46,7 @@ DeviceEvents
 | where AdditionalFields has_any ("Invoke-WebRequest", "IWR", "Net.WebClient")
 ```
 ## Microsoft Sentinel ##
+### Microsoft Defender for Endpoint via DeviceNetworkEvents ###
 ```KQL
 DeviceNetworkEvents
 | where InitiatingProcessFileName in~ ("powershell.exe", "pwsh.exe")
