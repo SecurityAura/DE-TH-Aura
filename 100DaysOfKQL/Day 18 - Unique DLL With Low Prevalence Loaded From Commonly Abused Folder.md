@@ -41,7 +41,7 @@ These queries are only available in Defender XDR (Advanced Hunting) since they r
 
 - Microsoft Defender for Endpoint (MDE) - 2 queries
 
-## Defender XDR ##
+## Microsoft Defender XDR ##
 ### Microsoft Defender for Endpoint via DeviceImageLoadEvents (C:\ProgramData) ###
 ```KQL
 let LowPrevDLLs = (DeviceImageLoadEvents
