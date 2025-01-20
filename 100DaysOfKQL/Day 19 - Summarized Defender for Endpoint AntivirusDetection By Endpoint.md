@@ -1,4 +1,4 @@
-# *Summarized Defender for Endpoint AntivirusDetection*
+# *Summarized Defender for Endpoint AntivirusDetection By Endpoint*
 
 ## Query Information
 
