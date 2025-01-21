@@ -26,6 +26,8 @@ Now I would have to test the most recent version to see if the path changed, but
 
 I'll update this query with a new regex, if there's indeed a new path (which may be in C:\Windows\Temp this time ...). And I should also check out NetExec (the successor of CME) to see how it looks...
 
+Edit: Confirmed that it's indeed in C:\Windows\Temp (same file regex) now on NetExec 1.3.0 and Impacket 0.12.0.dev1. Added the new FolderPath regex to the query.
+
 #### Author <Optional>
 - **Name:** SecurityAura
 - **Github:** https://github.com/SecurityAura
@@ -47,6 +49,7 @@ DeviceFileEvents
 | where InitiatingProcessCommandLine has "RemoteRegistry"
 | where FolderPath matches regex @'(?i)C\:\\Windows\\System32\\[a-zA-Z0-9]{8}.tmp'
   or FolderPath matches regex @'(?i)C\:\\Windows\\[a-zA-Z0-9]{8}.tmp'
+  or FolderPath matches regex @'(?i)C\:\\Windows\\Temp\\[a-zA-Z0-9]{8}.tmp'
 ```
 ## Microsoft Sentinel ##
 ### Microsoft Defender for Endpoint via DeviceFileEvents ###
@@ -56,4 +59,5 @@ DeviceFileEvents
 | where InitiatingProcessCommandLine has "RemoteRegistry"
 | where FolderPath matches regex @'(?i)C\:\\Windows\\System32\\[a-zA-Z0-9]{8}.tmp'
   or FolderPath matches regex @'(?i)C\:\\Windows\\[a-zA-Z0-9]{8}.tmp'
+  or FolderPath matches regex @'(?i)C\:\\Windows\\Temp\\[a-zA-Z0-9]{8}.tmp'
 ```
