@@ -1,4 +1,4 @@
-# *Password of Newly Created User Used Through The CommandLine.md*
+# *Password of Newly Created User Used Through The CommandLine*
 
 ## Query Information
 
