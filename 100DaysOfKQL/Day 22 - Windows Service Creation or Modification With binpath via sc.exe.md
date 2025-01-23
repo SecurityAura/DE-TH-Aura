@@ -11,6 +11,7 @@ This query returns events where a Windows service is created and/or modified via
 This query returns events where a Windows service is created with its binpath and/or its binpath is modified via sc.exe. Threat actors can leverage Windows Services for persistence, privilege escalation or even simple execution (think Impacket).
 
 https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/sc-create
+
 https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/sc-config
 
 One way of creating and/or modifying a service is through the sc.exe utility. To create a service, you need to specify the binpath option, which is the binary, executable, file, etc. that will be launched by that service. Threat actors can create a service to launch whatever binary they want, depending on their goal.
