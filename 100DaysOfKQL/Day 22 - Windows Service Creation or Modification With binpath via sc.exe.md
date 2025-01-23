@@ -45,22 +45,18 @@ https://github.com/SecurityAura/DE-TH-Aura/blob/main/Defender%20for%20Endpoint/P
 ## Microsoft Defender XDR ##
 ### Microsoft Defender for Endpoint via DeviceProcessEvents ###
 ```KQL
-let ServiceCreateParameters = dynamic(["create","binpath"]);
-let ServiceModifyParameters = dynamic(["config","binpath"]);
 DeviceProcessEvents
 | where InitiatingProcessFileName =~ "cmd.exe"
 | where FileName =~ "sc.exe"
-| where ProcessCommandLine has_any (ServiceCreateParameters) 
-    or ProcessCommandLine has_all (ServiceModifyParameters)
+| where ProcessCommandLine has_any ("create","config")
+| where ProcessCommandLine has "binpath"
 ```
 ## Microsoft Sentinel ##
 ### Microsoft Defender for Endpoint via DeviceProcessEvents ###
 ```KQL
-let ServiceCreateParameters = dynamic(["create","binpath"]);
-let ServiceModifyParameters = dynamic(["config","binpath"]);
 DeviceProcessEvents
 | where InitiatingProcessFileName =~ "cmd.exe"
 | where FileName =~ "sc.exe"
-| where ProcessCommandLine has_any (ServiceCreateParameters) 
-    or ProcessCommandLine has_all (ServiceModifyParameters)
+| where ProcessCommandLine has_any ("create","config")
+| where ProcessCommandLine has "binpath"
 ```
