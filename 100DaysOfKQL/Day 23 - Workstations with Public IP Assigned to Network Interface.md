@@ -33,7 +33,7 @@ If I had a penny for everytime I responded to that kind of incident, I would pro
 ### Microsoft Defender for Endpoint via DeviceInfo and DeviceNetworkInfo ###
 ```KQL
 let Workstations = (DeviceInfo
-| where DeviceType == "Server"
+| where DeviceType == "Workstation"
 | distinct DeviceName);
 DeviceNetworkInfo
 | where DeviceName in~ (Workstations)
@@ -44,7 +44,7 @@ DeviceNetworkInfo
 ### Microsoft Defender for Endpoint via DeviceInfo and DeviceNetworkInfo ###
 ```KQL
 let Workstations = (DeviceInfo
-| where DeviceType == "Server"
+| where DeviceType == "Workstation"
 | distinct DeviceName);
 DeviceNetworkInfo
 | where DeviceName in~ (Workstations)
