@@ -1,5 +1,9 @@
 # DE-TH-Aura
 
+![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/SecurityAura)
+![Bluesky](https://img.shields.io/badge/Bluesky-0285FF?style=for-the-badge&logo=Bluesky&logoColor=white)
+![Mastodon Follow](https://img.shields.io/mastodon/follow/109366346067412152?domain=infosec.exchange)
+
 *As of 2025/01/01, a new folder was added for my #100DaysOfKQL challenge. Queries from this challenge will be added there and at some point, after the challenge ends, I'll move them around in the repo in their appropriate sections.*
 
 For more information about my #100DaysOfKQL challenge, see the following Twitter thread:
