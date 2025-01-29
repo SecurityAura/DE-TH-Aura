@@ -8,7 +8,7 @@ These queries returns events where a large number of files would have been downl
 
 #### Description
 
-These queries returns events where a large number of files, based on the OfficeObjectId or FileSize, would have been downloaded from OneDrive or SharePoint.
+These queries returns events where a large number of files, based on the OfficeObjectId or FileSize, would have been downloaded from OneDrive or SharePoint. When files are downloaded from OneDrive and/or SharePoint, we're interested in how many unique files (OfficeObjectId) were downloaded in an set (X) amount of time. While at the endpoint level, we're interested in the FileSize of the resulting ZIP archive as a hint of how many files it could have (even though the FileSize can always be skewed because of large files with a low compression ratio).
 
 In terms of data exfil, an easy way for threat actors (or even insiders) to collect files is simply to download them from the OneDrive or SharePoint web interface directly. When multiple files, or even folders, are downloaded from OneDrive/SharePoint online you will have:
 
