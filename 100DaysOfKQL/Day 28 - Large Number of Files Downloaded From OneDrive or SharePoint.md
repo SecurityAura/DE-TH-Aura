@@ -65,7 +65,6 @@ DeviceFileEvents
 let Timespan = 10m;
 let DistinctOfficeObjectIdThreshold = 1000;
 OfficeActivity
-| where TimeGenerated > ago(30d)
 | where OfficeWorkload in ("OneDrive","SharePoint")
 | where Operation == "FileDownloaded"
 | where UserAgent has "OneDriveMpc-Transform_Zip"
