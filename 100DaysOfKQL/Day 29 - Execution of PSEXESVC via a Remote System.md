@@ -61,9 +61,24 @@ let PSEXESVCInstallEvents = (SecurityEvent
 | where EventID == "4697"
 | extend ParsedXML = parse_xml(EventData)
 | extend LogonIdHex = parse_json(tostring(parse_json(tostring(ParsedXML.EventData)).Data))[3].["#text"]
+| where parse_json(tostring(parse_json(tostring(ParsedXML.EventData)).Data))[4].["#text"] == "PSEXESVC"
 | extend LogonIdDec = tolong(LogonIdHex)
 | extend ComputerLower = tolower(Computer)
 | project ComputerLower, LogonIdDec);
 DeviceLogonEvents
 | join PSEXESVCInstallEvents on $left.DeviceName == $right.ComputerLower, $left.LogonId == $right.LogonIdDec
+```
+### SecurityEvents ###
+```KQL
+let PSEXESVCInstallEvents = (SecurityEvent
+| where EventID == "4697"
+| extend ParsedXML = parse_xml(EventData)
+| extend LogonIdHex = parse_json(tostring(parse_json(tostring(ParsedXML.EventData)).Data))[3].["#text"]
+| where parse_json(tostring(parse_json(tostring(ParsedXML.EventData)).Data))[4].["#text"] == "PSEXESVC"
+| extend LogonIdDec = tolong(LogonIdHex)
+| project Computer, LogonIdDec);
+SecurityEvent
+| where EventID == "4624"
+| extend LogonIdDec = tolong(TargetLogonId)
+| join PSEXESVCInstallEvents on Computer, $left.LogonIdDec == $right.LogonIdDec
 ```
