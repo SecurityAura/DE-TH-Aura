@@ -33,7 +33,7 @@ PS: As I was posting this, I realized that another query would be possible that 
 ### Queries Overview ###
 
 - Defender for Endpoint (MDE) - 1 query
-- Microsoft Sentinel (SecurityEvents) x Defender for Endpoint (MDE)  - 1 query
+- Microsoft Sentinel (SecurityEvents) x Defender for Endpoint (MDE)  - 2 query
 
 ## Microsoft Defender XDR ##
 ### Microsoft Defender for Endpoint via DeviceEvents, DeviceLogonEvents ###
