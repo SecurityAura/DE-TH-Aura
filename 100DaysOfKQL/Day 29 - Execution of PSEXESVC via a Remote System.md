@@ -15,6 +15,7 @@ These queries returns events where a PSEXESVC service install, which would have 
 This is achieved by maching the LogonId present in the ServiceInstall (MDE) or SecurityEvents (Event ID 4697) to the LogonId of the DeviceLogonEvents that happened on the endpoint.
 
 PS: As I was posting this, I realized that another query would be possible that doesn't rely on MDE, but uses two (2) SecurityEvents: 4624 (Successful Logon) and 4697 (New service install). I'll add it later.
+
 PS2: The additional SecurityEvents only query has been added!
 
 #### Author <Optional>
