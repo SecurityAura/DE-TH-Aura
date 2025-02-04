@@ -40,7 +40,6 @@ The queries below are more suited for hunting rather than detection, though they
 ### Queries Overview ###
 
 - Defender for Endpoint (MDE) - 4 queries
-- Microsoft Sentinel (SecurityEvents) - 1 query
 
 ## Microsoft Defender XDR ##
 ### Microsoft Defender for Endpoint via DeviceEvents ###
