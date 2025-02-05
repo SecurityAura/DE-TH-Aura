@@ -36,7 +36,7 @@ False positives here may usually include shortcut files that are created from an
 - Defender for Endpoint (MDE) - 1 query
 
 ## Microsoft Defender XDR ##
-### Microsoft Defender for Endpoint via DeviceEvents ###
+### Microsoft Defender for Endpoint via DeviceFileEvents ###
 ```KQL
 // You can add more extensions as needed
 let FileExtensions = dynamic([
@@ -61,7 +61,7 @@ DeviceFileEvents
     or FolderPath matches regex @"(?i)\\Users\\[^\\]+\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.Outlook\\[^\\]+\\(.*)?"
 ```
 ## Microsoft Sentinel ##
-### Microsoft Defender for Endpoint via DeviceEvents ###
+### Microsoft Defender for Endpoint via DeviceFileEvents ###
 ```KQL
 // You can add more extensions as needed
 let FileExtensions = dynamic([
