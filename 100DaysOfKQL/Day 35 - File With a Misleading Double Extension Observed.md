@@ -14,8 +14,8 @@ The double file extension trick seems to have been making a comeback lately (at 
 
 False positives here may usually include shortcut files that are created from an actual file in File Explorer. Depending on your system language, you can usually filter out files with specific strings:
 
-- Nouveau raccourci (in French)
-- New shortcut (in English)
+- Raccourci.lnk (in French)
+- Shortcut.lnk (in English)
 
 #### Author <Optional>
 - **Name:** SecurityAura
