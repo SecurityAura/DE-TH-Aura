@@ -33,13 +33,17 @@ The good news is that, if you're able to detect this activity, it also means tha
 ### Microsoft Defender for Endpoint via DeviceProcessEvents ###
 ```KQL
 DeviceProcessEvents
-| where (FileName in~ ("7z.exe","7zr.exe","7za.exe") and ProcessCommandLine contains " -p" and ProcessCommandLine has_any (" a "," x "))
+| where (FileName in~ ("7z.exe","7zr.exe","7za.exe")
+        and ProcessCommandLine contains " -p"
+        and ProcessCommandLine has_any (" a "," x "))
     or (FileName in~ ("WinRAR.exe","RAR.exe") and ProcessCommandLine has_all ("a","-p"))
 ```
 ## Microsoft Sentinel ##
 ### Microsoft Defender for Endpoint via DeviceProcessEvents ###
 ```KQL
 DeviceProcessEvents
-| where (FileName in~ ("7z.exe","7zr.exe","7za.exe") and ProcessCommandLine contains " -p" and ProcessCommandLine has_any (" a "," x "))
+| where (FileName in~ ("7z.exe","7zr.exe","7za.exe")
+        and ProcessCommandLine contains " -p"
+        and ProcessCommandLine has_any (" a "," x "))
     or (FileName in~ ("WinRAR.exe","RAR.exe") and ProcessCommandLine has_all ("a","-p"))
 ```
