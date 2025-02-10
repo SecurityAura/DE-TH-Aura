@@ -91,6 +91,7 @@ DeviceRegistryEvents
 | where RegistryValueData has "powershell"
 | where RegistryValueData !in~ (@"powershell\1",@"powershell.exe\1")
 ```
+### Microsoft Defender for Endpoint via DeviceRegistryEvents ###
 ```KQL
 let InterestingStrings = dynamic([
     "Hidden",
