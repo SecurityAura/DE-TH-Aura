@@ -8,7 +8,9 @@ This query returns events where a binary that was executed is potentially rename
 
 #### Description
 
-CREDIT IS GIVEN WHERE CREDIT IS DUE: I came up with this query some time ago already and at that time, I ended up discovering the set_has_element() function in KQL. Like with every function I've never used before, I browse various KQL repos to get an idea of how to use them. The reason I do this is because the Microsoft Learn docs content for these functions is often very sparse and not that helpful. So it's better for me to just find an actual example of the function used for security-related queries.
+*CREDIT IS GIVEN WHERE CREDIT IS DUE*
+
+I came up with this query some time ago already and at that time, I ended up discovering the set_has_element() function in KQL. Like with every function I've never used before, I browse various KQL repos to get an idea of how to use them. The reason I do this is because the Microsoft Learn docs content for these functions is often very sparse and not that helpful. So it's better for me to just find an actual example of the function used for security-related queries.
 
 This being said, I ended up finding the following query in FalconForce's FalconFriday Github repo. Which you should definitely go star and follow them on all their socials, they are just amazing:
 
