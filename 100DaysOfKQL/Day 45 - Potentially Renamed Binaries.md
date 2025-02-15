@@ -30,7 +30,7 @@ To do so, we define a datatable with the expected "pair" of values we're expecti
 
 You can add any "pair" of expected values in the datatable, which makes it useful if you want to monitor for specific binaries that would've been renamed: rclone, 7-Zip, WinRAR being some of the most common and interesting ones.
 
-To make this query less resource intensive, you could add a filter first that only looks for processes where the ProcessVerionInfoOriginalFileName has any of the strings you're looking for (e.g.: rclone).
+To make this query less resource intensive, you could add a filter first that only looks for processes where the ProcessVersionInfoOriginalFileName has any of the strings you're looking for (e.g.: rclone).
 
 #### Author <Optional>
 - **Name:** SecurityAura
