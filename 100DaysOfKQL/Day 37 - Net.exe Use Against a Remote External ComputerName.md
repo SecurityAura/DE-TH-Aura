@@ -47,7 +47,6 @@ The query may need to be tweaked if you run it in an environment where multiple 
 let IPRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}';
 let FQDN = "YOUR_FQDN_HERE";
 DeviceProcessEvents
-| where TimeGenerated > ago(30d)
 | where FileName =~ "net.exe"
 | where ProcessCommandLine has_all ("use","\\\\")
 // Extracting the ComputerName from the ProcessCommandLine (e.g.: \\SERVER1\, \\192.168.10.100\, \\NAS.DOMAIN.LOCAL\, etc.)
@@ -69,7 +68,6 @@ DeviceProcessEvents
 let IPRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}';
 let FQDN = "YOUR_FQDN_HERE";
 DeviceProcessEvents
-| where TimeGenerated > ago(30d)
 | where FileName =~ "net.exe"
 | where ProcessCommandLine has_all ("use","\\\\")
 // Extracting the ComputerName from the ProcessCommandLine (e.g.: \\SERVER1\, \\192.168.10.100\, \\NAS.DOMAIN.LOCAL\, etc.)
