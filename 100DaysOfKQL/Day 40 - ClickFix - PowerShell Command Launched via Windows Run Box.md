@@ -55,7 +55,6 @@ I've also provided that query here.
 ### Microsoft Defender for Endpoint via DeviceRegistryEvents ###
 ```KQL
 DeviceRegistryEvents
-| where TimeGenerated > ago(30d)
 | where ActionType == "RegistryValueSet"
 | where RegistryKey endswith @"Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU"
 | where RegistryValueName != "MRUList"
@@ -74,7 +73,6 @@ let InterestingStrings = dynamic([
     "Invoke"
 ]);
 DeviceRegistryEvents
-| where TimeGenerated > ago(30d)
 | where ActionType == "RegistryValueSet"
 | where RegistryKey endswith @"Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU"
 | where RegistryValueName != "MRUList"
@@ -85,7 +83,6 @@ DeviceRegistryEvents
 ### Microsoft Defender for Endpoint via DeviceRegistryEvents ###
 ```KQL
 DeviceRegistryEvents
-| where TimeGenerated > ago(30d)
 | where ActionType == "RegistryValueSet"
 | where RegistryKey endswith @"Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU"
 | where RegistryValueName != "MRUList"
@@ -104,7 +101,6 @@ let InterestingStrings = dynamic([
     "Invoke"
 ]);
 DeviceRegistryEvents
-| where TimeGenerated > ago(30d)
 | where ActionType == "RegistryValueSet"
 | where RegistryKey endswith @"Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU"
 | where RegistryValueName != "MRUList"
