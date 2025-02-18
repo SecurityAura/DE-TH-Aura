@@ -43,7 +43,6 @@ PS: Yes, the same logic can be applied to Windows Service creation events. Be pa
 ### Microsoft Defender for Endpoint DeviceEvents, DeviceLogonEvents ###
 ```KQL
 DeviceEvents
-| where TimeGenerated > ago(30d)
 | where ActionType == "ScheduledTaskCreated"
 | join (
     DeviceLogonEvents
