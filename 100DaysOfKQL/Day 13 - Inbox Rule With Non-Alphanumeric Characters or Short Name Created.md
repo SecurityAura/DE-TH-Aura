@@ -49,7 +49,6 @@ let ActionTypes = dynamic([
 // You can adjust this value to tune-down possible false positives.
 let RuleNameLength = 5;
 CloudAppEvents
-| where TimeGenerated > ago(30d)
 | where ActionType in~ (ActionTypes)
 | mv-expand ActObj = ActivityObjects
 | where ActObj.Name in~ ("Name","RuleName")
