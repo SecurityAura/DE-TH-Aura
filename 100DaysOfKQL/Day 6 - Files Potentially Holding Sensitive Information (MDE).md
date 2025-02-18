@@ -57,7 +57,6 @@ let FileExtensions = dynamic([
 	"jpeg"
 ]);
 DeviceFileEvents
-| where TimeGenerated > ago(30d)
 | where FileName has_any (FileNameStrings)
 | extend FileExtension = split(FileName,".")[-1]
 | where FileExtension in~ (FileExtensions)
@@ -92,7 +91,6 @@ let FileExtensions = dynamic([
 	"jpeg"
 ]);
 DeviceFileEvents
-| where TimeGenerated > ago(30d)
 | where FileName has_any (FileNameStrings)
 | extend FileExtension = split(FileName,".")[-1]
 | where FileExtension in~ (FileExtensions)
