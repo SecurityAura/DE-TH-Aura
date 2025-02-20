@@ -51,26 +51,26 @@ PS: Maybe there will be an upcoming #100DaysOfKQL day showing how to spot these 
 ```KQL
 DeviceEvents
 | where ActionType == "PowerShellCommand"
-| where AdditionalFields has_any ("Enter-PSSession", "New-PSSession")
+| where AdditionalFields has_any ("Enter-PSSession", "New-PSSession", "Invoke-Command")
 ```
 ### Microsoft Defender for Endpoint via DeviceProcessEvents ###
 ```KQL
 DeviceProcessEvents
 | where (FileName =~ "winrs.exe" and ProcessCommandLine has_any ("/r:", "/remote:")
     or (FileName =~ "wmic.exe" and ProcessCommandLine has "/node:")
-    or (FileName in~ ("powershell.exe", "pwsh.exe") and ProcessCommandLine has_any ("Enter-PSSession", "New-PSSession")
+    or (FileName in~ ("powershell.exe", "pwsh.exe") and ProcessCommandLine has_any ("Enter-PSSession", "New-PSSession", "Invoke-Command")
 ```
 ## Microsoft Sentinel ##
 ### Microsoft Defender for Endpoint via DeviceEvents ###
 ```KQL
 DeviceEvents
 | where ActionType == "PowerShellCommand"
-| where AdditionalFields has_any ("Enter-PSSession", "New-PSSession")
+| where AdditionalFields has_any ("Enter-PSSession", "New-PSSession", "Invoke-Command")
 ```
 ### Microsoft Defender for Endpoint via DeviceProcessEvents ###
 ```KQL
 DeviceProcessEvents
 | where (FileName =~ "winrs.exe" and ProcessCommandLine has_any ("/r:", "/remote:")
     or (FileName =~ "wmic.exe" and ProcessCommandLine has "/node:")
-    or (FileName in~ ("powershell.exe", "pwsh.exe") and ProcessCommandLine has_any ("Enter-PSSession", "New-PSSession")
+    or (FileName in~ ("powershell.exe", "pwsh.exe") and ProcessCommandLine has_any ("Enter-PSSession", "New-PSSession", "Invoke-Command")
 ```
