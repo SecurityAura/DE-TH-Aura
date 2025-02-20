@@ -39,6 +39,8 @@ PS: Maybe there will be an upcoming #100DaysOfKQL day showing how to spot these 
 ### References ###
 
 - https://lolbas-project.github.io/lolbas/Binaries/Wmic/
+- https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/winrs
+- https://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/08-powershell-remoting?view=powershell-7.5
 
 ### Queries Overview ###
 
