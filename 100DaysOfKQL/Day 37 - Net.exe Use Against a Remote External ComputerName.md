@@ -59,7 +59,7 @@ DeviceProcessEvents
 // Filter out connections to ComputerNames where the FQDN ends with our internal FQDN
 | where ComputerName !endswith FQDN
 // Filter out private IP addresses (internal use)
-| where IPType != "Private
+| where IPType != "Private"
 ```
 ## Microsoft Sentinel ##
 ### Microsoft Defender for Endpoint via DeviceProcessEvents ###
@@ -80,5 +80,5 @@ DeviceProcessEvents
 // Filter out connections to ComputerNames where the FQDN ends with our internal FQDN
 | where ComputerName !endswith FQDN
 // Filter out private IP addresses (internal use)
-| where IPType != "Private
+| where IPType != "Private"
 ```
