@@ -54,7 +54,7 @@ let LowPrevDLLs = (DeviceImageLoadEvents
 | invoke FileProfile("SHA1",1000)
 // Adjust the GlobalPrevalence filter as needed
 | where GlobalPrevalence < 500
-| distinct SHA1);
+);
 DeviceImageLoadEvents
 | where InitiatingProcessFolderPath matches regex @"(?i)C\:\\ProgramData\\(.*)?"
 | where FolderPath matches regex @"(?i)C\:\\ProgramData\\(.*)?"
@@ -76,7 +76,7 @@ let LowPrevDLLs = (DeviceImageLoadEvents
 | invoke FileProfile("SHA1",1000)
 // Adjust the GlobalPrevalence filter as needed
 | where GlobalPrevalence < 500
-| distinct SHA1);
+);
 DeviceImageLoadEvents
 | where InitiatingProcessFolderPath matches regex @"(?i)C\:\\Users\\[^\\]+\\AppData\\(Local|Roaming)\\(.*)?"
 | where not (InitiatingProcessFolderPath matches regex @"(?i)C\:\\Users\\[^\\]+\\AppData\\Local\\Temp\\(.*)?")
