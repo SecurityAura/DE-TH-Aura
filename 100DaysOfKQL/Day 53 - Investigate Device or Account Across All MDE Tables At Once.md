@@ -58,7 +58,6 @@ union DeviceEvents, DeviceFileEvents, DeviceImageLoadEvents, DeviceLogonEvents, 
 | where TimeGenerated between ( StartDate .. EndDate )
 | where DeviceName =~ TargetDevice
 ```
-## Microsoft Defender XDR ##
 ### Microsoft Defender for Endpoint via Everything (search by AccountName) ###
 ```KQL
 // Modify the StartDate and EndDate based on your needs.
@@ -88,7 +87,6 @@ union DeviceEvents, DeviceFileEvents, DeviceImageLoadEvents, DeviceLogonEvents, 
 | where TimeGenerated between ( StartDate .. EndDate )
 | where DeviceName =~ TargetDevice
 ```
-## Microsoft Defender XDR ##
 ### Microsoft Defender for Endpoint via Everything (search by AccountName) ###
 ```KQL
 // Modify the StartDate and EndDate based on your needs.
