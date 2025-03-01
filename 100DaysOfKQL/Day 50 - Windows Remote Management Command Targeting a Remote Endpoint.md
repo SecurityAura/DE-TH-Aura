@@ -56,9 +56,9 @@ DeviceEvents
 ### Microsoft Defender for Endpoint via DeviceProcessEvents ###
 ```KQL
 DeviceProcessEvents
-| where (FileName =~ "winrs.exe" and ProcessCommandLine has_any ("/r:", "/remote:")
+| where (FileName =~ "winrs.exe" and ProcessCommandLine has_any ("/r:", "/remote:"))
     or (FileName =~ "wmic.exe" and ProcessCommandLine has "/node:")
-    or (FileName in~ ("powershell.exe", "pwsh.exe") and ProcessCommandLine has_any ("Enter-PSSession", "New-PSSession", "Invoke-Command")
+    or (FileName in~ ("powershell.exe", "pwsh.exe") and ProcessCommandLine has_any ("Enter-PSSession", "New-PSSession", "Invoke-Command"))
 ```
 ## Microsoft Sentinel ##
 ### Microsoft Defender for Endpoint via DeviceEvents ###
@@ -70,7 +70,7 @@ DeviceEvents
 ### Microsoft Defender for Endpoint via DeviceProcessEvents ###
 ```KQL
 DeviceProcessEvents
-| where (FileName =~ "winrs.exe" and ProcessCommandLine has_any ("/r:", "/remote:")
+| where (FileName =~ "winrs.exe" and ProcessCommandLine has_any ("/r:", "/remote:"))
     or (FileName =~ "wmic.exe" and ProcessCommandLine has "/node:")
-    or (FileName in~ ("powershell.exe", "pwsh.exe") and ProcessCommandLine has_any ("Enter-PSSession", "New-PSSession", "Invoke-Command")
+    or (FileName in~ ("powershell.exe", "pwsh.exe") and ProcessCommandLine has_any ("Enter-PSSession", "New-PSSession", "Invoke-Command"))
 ```
