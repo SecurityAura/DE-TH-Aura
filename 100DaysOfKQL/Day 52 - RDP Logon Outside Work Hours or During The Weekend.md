@@ -54,10 +54,10 @@ let Timezone = "YOUR_TIMEZONE_HERE";
 DeviceLogonEvents
 | where LogonType == "RemoteInteractive"
 | extend LocalDateTime = datetime_utc_to_local(TimeGenerated,Timezone)
-| extend DayOfWeek = toint((dayofweek(LocalTime))/1d)
+| extend DayOfWeek = toint((dayofweek(LocalDateTime))/1d)
 | extend HourOfDay = datetime_part("hour", LocalDateTime)
 | where DayOfWeek in (0, 6)
-    or (DayOfWeek between ( 1 .. 5 ) and (Hour between (17 .. 23) or Hour between ( 00 .. 07)))
+    or (DayOfWeek between ( 1 .. 5 ) and (HourOfDay between (17 .. 23) or HourOfDay between ( 00 .. 07)))
 | extend ActualDay = DaysOfWeek[DayOfWeek]
 ```
 ### Microsoft Defender for Identity via IdentityLogonEvents ###
@@ -76,10 +76,10 @@ let Timezone = "YOUR_TIMEZONE_HERE";
 IdentityLogonEvents
 | where LogonType == "Remote desktop"
 | extend LocalDateTime = datetime_utc_to_local(TimeGenerated,Timezone)
-| extend DayOfWeek = toint((dayofweek(LocalTime))/1d)
+| extend DayOfWeek = toint((dayofweek(LocalDateTime))/1d)
 | extend HourOfDay = datetime_part("hour", LocalDateTime)
 | where DayOfWeek in (0, 6)
-    or (DayOfWeek between ( 1 .. 5 ) and (Hour between (17 .. 23) or Hour between ( 00 .. 07)))
+    or (DayOfWeek between ( 1 .. 5 ) and (HourOfDay between (17 .. 23) or HourOfDay between ( 00 .. 07)))
 | extend ActualDay = DaysOfWeek[DayOfWeek]
 ```
 ## Microsoft Sentinel ##
@@ -99,10 +99,10 @@ let Timezone = "YOUR_TIMEZONE_HERE";
 DeviceLogonEvents
 | where LogonType == "RemoteInteractive"
 | extend LocalDateTime = datetime_utc_to_local(TimeGenerated,Timezone)
-| extend DayOfWeek = toint((dayofweek(LocalTime))/1d)
+| extend DayOfWeek = toint((dayofweek(LocalDateTime))/1d)
 | extend HourOfDay = datetime_part("hour", LocalDateTime)
 | where DayOfWeek in (0, 6)
-    or (DayOfWeek between ( 1 .. 5 ) and (Hour between (17 .. 23) or Hour between ( 00 .. 07)))
+    or (DayOfWeek between ( 1 .. 5 ) and (HourOfDay between (17 .. 23) or HourOfDay between ( 00 .. 07)))
 | extend ActualDay = DaysOfWeek[DayOfWeek]
 ```
 ### Microsoft Defender for Identity via IdentityLogonEvents ###
@@ -121,10 +121,10 @@ let Timezone = "YOUR_TIMEZONE_HERE";
 IdentityLogonEvents
 | where LogonType == "Remote desktop"
 | extend LocalDateTime = datetime_utc_to_local(TimeGenerated,Timezone)
-| extend DayOfWeek = toint((dayofweek(LocalTime))/1d)
+| extend DayOfWeek = toint((dayofweek(LocalDateTime))/1d)
 | extend HourOfDay = datetime_part("hour", LocalDateTime)
 | where DayOfWeek in (0, 6)
-    or (DayOfWeek between ( 1 .. 5 ) and (Hour between (17 .. 23) or Hour between ( 00 .. 07)))
+    or (DayOfWeek between ( 1 .. 5 ) and (HourOfDay between (17 .. 23) or HourOfDay between ( 00 .. 07)))
 | extend ActualDay = DaysOfWeek[DayOfWeek]
 ```
 ### SecurityEvent ###
@@ -144,9 +144,9 @@ SecurityEvent
 | where EventID == 4624
 | where LogonType == 10
 | extend LocalDateTime = datetime_utc_to_local(TimeGenerated,Timezone)
-| extend DayOfWeek = toint((dayofweek(LocalTime))/1d)
+| extend DayOfWeek = toint((dayofweek(LocalDateTime))/1d)
 | extend HourOfDay = datetime_part("hour", LocalDateTime)
 | where DayOfWeek in (0, 6)
-    or (DayOfWeek between ( 1 .. 5 ) and (Hour between (17 .. 23) or Hour between ( 00 .. 07)))
+    or (DayOfWeek between ( 1 .. 5 ) and (HourOfDay between (17 .. 23) or HourOfDay between ( 00 .. 07)))
 | extend ActualDay = DaysOfWeek[DayOfWeek]
 ```
