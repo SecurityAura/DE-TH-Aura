@@ -29,12 +29,15 @@ PS: For more immediate context, Sysinternals tools can be (ab)used by threat act
 
 ## Microsoft Defender XDR ##
 ### Microsoft Defender for Endpoint via DeviceProcessEvents ###
+```KQL
 DeviceProcessEvents
 | where ProcessVersionInfoCompanyName has "Sysinternals"
     or ProcessVersionInfoProductName has "Sysinternals"
 ```
 ## Microsoft Sentinel ##
 ### Microsoft Defender for Endpoint via DeviceProcessEvents ###
+```KQL
 DeviceProcessEvents
 | where ProcessVersionInfoCompanyName has "Sysinternals"
     or ProcessVersionInfoProductName has "Sysinternals"
+```
