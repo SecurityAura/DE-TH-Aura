@@ -8,7 +8,7 @@ This query returns events where a Sysinternal utility/tool is used.
 
 #### Description
 
-DISCLAIMER - I'm currently sick and fighting sleepiness as I post this. As usual, I'll enhance that page with more information when I get better/get back. For now, consider this as a hunting query. You can add as many VPN ranges are you want, assuming you have more than one, e.g.: multiple locations.
+DISCLAIMER - I'm currently sick and fighting sleepiness as I post this. As usual, I'll enhance that page with more information when I get better/get back. For now, consider this as a hunting query.
 
 This query returns events where a Sysinternal utility/tool is used.
 
