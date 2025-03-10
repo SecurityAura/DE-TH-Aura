@@ -1,0 +1,50 @@
+# *SSH Used For Reverse Tunnel on Windows*
+
+## Query Information
+
+This query returns events where SSH (on Windows) is used to set up a reverse tunnel.
+
+##
+
+#### Description
+
+DISCLAIMER - I'm currently sick and fighting sleepiness as I post this. As usual, I'll enhance that page with more information when I get better/get back. For now, consider this as a hunting query.
+
+This query returns events where SSH (on Windows) is used to set up a reverse tunnel.
+
+PS: For more immediate context, threat actors can setup reverse tunnels to bypass network restrictions and from there, access systems remotely through other means, such as RDP (RDP through SSH tunnel).
+
+#### Author <Optional>
+
+- **Name:** SecurityAura
+- **Github:** https://github.com/SecurityAura
+- **Twitter:** https://x.com/SecurityAura
+- **BlueSky:** https://bsky.app/profile/securityaura.bsky.social
+- **Mastodon (InfoSec.Exchange):** https://infosec.exchange/@SecurityAura
+- **LinkedIn:** Coming Soon!
+- **Website:** https://medium.com/@securityaura
+
+### References ###
+
+- https://cloud.google.com/blog/topics/threat-intelligence/bypassing-network-restrictions-through-rdp-tunneling
+
+### Queries Overview ###
+
+- Defender for Endpoint (MDE) - 1 query
+
+## Microsoft Defender XDR ##
+### Microsoft Defender for Endpoint via DeviceNetworkEvents ###
+```KQL
+let SSHArgs = dynamic(["-R","@",":"]);
+DeviceNetworkEvents
+| where InitiatingProcessFileName =~ "ssh.exe"
+    or InitiatingProcessCommandLine has_all (SSHArgs)
+```
+## Microsoft Sentinel ##
+### Microsoft Defender for Endpoint via DeviceNetworkEvents ###
+```KQL
+let SSHArgs = dynamic(["-R","@",":"]);
+DeviceNetworkEvents
+| where InitiatingProcessFileName =~ "ssh.exe"
+    or InitiatingProcessCommandLine has_all (SSHArgs)
+```
