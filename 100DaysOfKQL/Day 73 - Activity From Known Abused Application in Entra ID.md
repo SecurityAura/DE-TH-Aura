@@ -1,8 +1,8 @@
-# *Activity From Known Abused Application*
+# *Activity From Known Abused Application in Entra ID*
 
 ## Query Information
 
-This query returns events from known abused application in Azure/Entra ID.
+This query returns events from known abused application in Entra ID.
 
 ##
 
