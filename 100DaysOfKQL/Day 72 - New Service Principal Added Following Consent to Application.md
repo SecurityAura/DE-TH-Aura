@@ -23,12 +23,6 @@ PS: For more immediate context, this is the kind of query which will return you 
 - **LinkedIn:** Coming Soon!
 - **Website:** https://medium.com/@securityaura
 
-### References ###
-
-- https://www.crowdstrike.com/en-us/blog/hunting-for-malicious-jscript-with-overwatch-elite/
-- https://www.sentinelone.com/labs/deep-insight-into-fin7-malware-chain-from-office-macro-malware-to-lightweight-js-loader/
-- https://www.uptycs.com/blog/threat-research-report-team/understanding-stealerium-malware-and-its-evasion-techniques
-
 ### Queries Overview ###
 
 - Microsoft Sentinel (Entra ID) - 1 query
