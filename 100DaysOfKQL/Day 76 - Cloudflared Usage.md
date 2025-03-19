@@ -43,7 +43,7 @@ union DeviceEvents, DeviceProcessEvents, DeviceNetworkEvents, DeviceFileEvents, 
     or InitiatingProcessCommandLine has_all ("tunnel", "run", "--token")
 ```
 ## Microsoft Sentinel ##
-### Microsoft Defender for Endpoint via DeviceProcessEvents ###
+### Microsoft Defender for Endpoint via union DeviceEvents, DeviceProcessEvents, DeviceNetworkEvents, DeviceFileEvents, DeviceRegistryEvents, DeviceImageLoadEvents ###
 ```KQL
 union DeviceEvents, DeviceProcessEvents, DeviceNetworkEvents, DeviceFileEvents, DeviceRegistryEvents, DeviceImageLoadEvents
 | where FileName has "cloudflared"
