@@ -1,4 +1,4 @@
-# *Database Dump via sqlcmd.exe*
+# *Database Dump To Disk via sqlcmd.exe*
 
 ## Query Information
 
