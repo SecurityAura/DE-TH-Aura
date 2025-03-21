@@ -30,7 +30,7 @@ PS: Disregard the ugly distinct tostring(), mv-expand and distinct tostring() ha
 ## Microsoft Sentinel ##
 ### Microsoft Defender for Endpoint via DeviceNetworkEvents and Entra ID via SigninLogs, AADNonInteractiveUserSignInLogs ###
 ```KQL
-let PhishingDomain = "fooddonation.ca";
+let PhishingDomain = "INSERT_PHISHING_DOMAIN_HERE";
 let NetworkEventsDns = (
     DeviceNetworkEvents
     | where ActionType == "DnsConnectionInspected"
