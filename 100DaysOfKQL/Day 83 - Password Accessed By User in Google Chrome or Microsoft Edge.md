@@ -12,7 +12,7 @@ DISCLAIMER - I have to post this query quickly today. I'll comeback to it and up
 
 This query returns events where a password saved in the Password Manager was potentially accessed by a user.
 
-Chromium-based Web browsers such as Google Chrome and Microsoft Edge uses DPAPI to encrypt/protect the passwords saved in the Password Manager feature. When you try to access an account that was saved there, you're prompted for your credentials. Entering your credentials successfully results in the access of that account within the Password Manager from which you can display/show the saved password if needed.
+Chromium-based Web browsers such as Google Chrome and Microsoft Edge encrypt/protect the passwords saved in the Password Manager feature. When you try to access an account that was saved there, you're prompted for your credentials to confirm that you can access them. Entering your credentials successfully results in the access of that account within the Password Manager from which you can display/show the saved password if needed.
 
 This generates an Interactive (Logon Type 2) successful logon event from the user that logged in from the Web Browser process, e.g.: chrome.exe or msedge.exe.
 
