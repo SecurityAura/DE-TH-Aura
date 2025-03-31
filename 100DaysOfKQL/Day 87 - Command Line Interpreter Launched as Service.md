@@ -26,6 +26,7 @@ If you've ever dealt with Cobalt Strike, you know.
 ### References ###
 
 - https://redcanary.com/threat-detection-report/techniques/windows-command-shell/
+- https://www.logpoint.com/en/blog/how-to-detect-stealthy-cobalt-strike-activity-in-your-enterprise/#
 
 ### Queries Overview ###
 
