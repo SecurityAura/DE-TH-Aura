@@ -36,17 +36,13 @@ If you've ever dealt with Cobalt Strike, you know.
 ### Microsoft Defender for Endpoint via ProcessEvents ###
 ```KQL
 DeviceProcessEvents
-| where TimeGenerated > ago(90d)
 | where InitiatingProcessFileName =~ "services.exe"
 | where FileName in~ ("cmd.exe","powershell.exe","pwsh.exe")
-
 ```
 ## Microsoft Sentinel ##
 ### Microsoft Defender for Endpoint via ProcessEvents ###
 ```KQL
 DeviceProcessEvents
-| where TimeGenerated > ago(90d)
 | where InitiatingProcessFileName =~ "services.exe"
 | where FileName in~ ("cmd.exe","powershell.exe","pwsh.exe")
-
 ```
