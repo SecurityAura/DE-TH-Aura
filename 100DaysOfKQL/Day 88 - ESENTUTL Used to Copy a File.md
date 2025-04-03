@@ -32,14 +32,14 @@ esentutl.exe may be used in some environment by SysAdmins trying to interact (re
 - Defender for Endpoint (MDE) - 1 query
 
 ## Microsoft Defender XDR ##
-### Microsoft Defender for Endpoint via ProcessEvents ###
+### Microsoft Defender for Endpoint via DeviceProcessEvents ###
 ```KQL
 DeviceProcessEvents
 | where FileName =~ "esentutl.exe"
 | where ProcessCommandLine has "/y"
 ```
 ## Microsoft Sentinel ##
-### Microsoft Defender for Endpoint via ProcessEvents ###
+### Microsoft Defender for Endpoint via DeviceProcessEvents ###
 ```KQL
 DeviceProcessEvents
 | where FileName =~ "esentutl.exe"
