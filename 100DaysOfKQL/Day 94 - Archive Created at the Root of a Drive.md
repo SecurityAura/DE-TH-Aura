@@ -30,7 +30,7 @@ Note: The false positives you may get the most are files on USB Flash Drives tha
 - Microsoft Defender for Endpoint (MDE) - 1 query
 
 ## Defender XDR ##
-### Microsoft Defender for Endpoint via DevicFileEvents ###
+### Microsoft Defender for Endpoint via DeviceFileEvents ###
 ```KQL
 DeviceFileEvents
 // We're excluding the C:\ drive since our hypothesis is that the threat actor is compressing files from other drives
