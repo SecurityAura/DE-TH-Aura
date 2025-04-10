@@ -44,7 +44,7 @@ DeviceProcessEvents
 | where ProcessCommandLine has "-ComObject"
 ```
 ### Microsoft Defender for Endpoint via DeviceEvents ###
-```
+```KQL
 DeviceEvents
 | where ActionType == "PowerShellCommand"
 | where AdditionalFields has "-ComObject"
@@ -57,7 +57,7 @@ DeviceProcessEvents
 | where ProcessCommandLine has "-ComObject"
 ```
 ### Microsoft Defender for Endpoint via DeviceEvents ###
-```
+```KQL
 DeviceEvents
 | where ActionType == "PowerShellCommand"
 | where AdditionalFields has "-ComObject"
