@@ -1,4 +1,4 @@
-# *Execution from a Low Prevalence, Non-Signed or Invalid Signed Binary from C:\Windows*
+# *Execution from a Low Prevalence, Non-Signed or Invalidly Signed Binary from C:\Windows*
 
 ## Query Information
 
