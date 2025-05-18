@@ -2,9 +2,19 @@
 
 ## Query Information
 
-This query return events where the net.exe use command was used against a remote, external ComputerName.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/02/06 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1021.002 | Remote Services: SMB/Windows Admin Shares | https://attack.mitre.org/techniques/T1021/002/ |
+| T1048 | Exfiltration Over Alternative Protocol | https://attack.mitre.org/techniques/T1048/ |
 
 #### Description
 
