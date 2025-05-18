@@ -2,9 +2,18 @@
 
 ## Query Information
 
-This query returns instances of cmd.exe that were executed silently where the STDERR and STDOUT outputs are redirected.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/01/08 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1059.003 | Command and Scripting Interpreter: Windows Command Shell | https://attack.mitre.org/techniques/T1059/003/ |
 
 #### Description
 
