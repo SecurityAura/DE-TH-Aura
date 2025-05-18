@@ -2,9 +2,18 @@
 
 ## Query Information
 
-This query return events that are associated with a remote connection associated with a defined DeviceName or SessionIP.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/02/10 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1021.001 | Remote Services: Remote Desktop Protocol | https://attack.mitre.org/techniques/T1021/001/ |
 
 #### Description
 
