@@ -2,9 +2,18 @@
 
 ## Query Information
 
-This query returns events where a "Azure Subscription is ready" email is sent to a user.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/02/15 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1578 | Modify Cloud Compute Infrastructure | https://attack.mitre.org/techniques/T1578/ |
 
 #### Description
 
