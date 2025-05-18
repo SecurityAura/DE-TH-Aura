@@ -2,9 +2,17 @@
 
 ## Query Information
 
-This query is a summarization query which provides, by TLD, DeviceNetworkEvents from processes in the C:\Windows folder (and subfolders).
+#### Changelog
+| Date | Comments |
+|---|---|
+| 2025/01/07 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
 
-##
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| N/A | N/A | N/A |
 
 #### Description
 
