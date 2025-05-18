@@ -2,9 +2,18 @@
 
 ## Query Information
 
-This query return events were an Inbox Rule (in Exchange, Office 365) was created and involves a suspicious and/or commonly abused folder.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/01/30 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1564.008 | Hide Artifacts: Email Hiding Rules | https://attack.mitre.org/techniques/T1564/008/ |
 
 #### Description
 
