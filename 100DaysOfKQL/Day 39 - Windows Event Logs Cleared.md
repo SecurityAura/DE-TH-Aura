@@ -2,9 +2,18 @@
 
 ## Query Information
 
-This query return events where Windows Event Logs were cleared.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/02/08 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1070.001 | Indicator Removal: Clear Windows Event Logs | https://attack.mitre.org/techniques/T1070/001/ |
 
 #### Description
 
