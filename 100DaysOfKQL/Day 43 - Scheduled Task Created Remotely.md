@@ -2,9 +2,18 @@
 
 ## Query Information
 
-This query returns events where a Scheduled Task was created remotely.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/02/12 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1053.005 | Scheduled Task/Job: Scheduled Task | https://attack.mitre.org/techniques/T1053/005/ |
 
 #### Description
 
