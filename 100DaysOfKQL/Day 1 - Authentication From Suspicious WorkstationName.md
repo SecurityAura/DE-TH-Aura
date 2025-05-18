@@ -2,7 +2,7 @@
 
 ## Query Information
 
-### Changelog
+#### Changelog
 | Date | Comments |
 |---|---|
 | 2025/01/01 | Initial version (part of #100DaysOfKQL) |
