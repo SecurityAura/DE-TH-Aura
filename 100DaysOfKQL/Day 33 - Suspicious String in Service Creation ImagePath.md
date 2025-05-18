@@ -2,9 +2,19 @@
 
 ## Query Information
 
-These queries returns events where a suspicious string was found in the ImagePath of a service creation event.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/02/02 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1569.002 | System Services: Service Execution | https://attack.mitre.org/techniques/T1569/002/ |
+| T1543.003 | Create or Modify System Process: Windows Service | https://attack.mitre.org/techniques/T1543/003/ |
 
 #### Description
 
