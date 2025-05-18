@@ -2,9 +2,18 @@
 
 ## Query Information
 
-This query returns events where a malicious driver is either seen on a system or loaded.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/01/24 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1068 | Exploitation for Privilege Escalation | https://attack.mitre.org/techniques/T1068/ |
 
 #### Description
 
