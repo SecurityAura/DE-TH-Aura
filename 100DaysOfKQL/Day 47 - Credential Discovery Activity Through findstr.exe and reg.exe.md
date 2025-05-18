@@ -2,9 +2,19 @@
 
 ## Query Information
 
-This query returns events where findstr.exe and reg.exe are potentially being used to search for credentials.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/02/16 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1552.001 | Unsecured Credentials: Credentials In Files | https://attack.mitre.org/techniques/T1552/001/ |
+| T1552.002 | Unsecured Credentials: Credentials In Registry | https://attack.mitre.org/techniques/T1552/002/ | 
 
 #### Description
 
