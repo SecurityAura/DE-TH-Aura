@@ -2,9 +2,18 @@
 
 ## Query Information
 
-This query look for file events involving files that may potentially hold sensitive information, such as credentials.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/01/06 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1552.001 | Unsecured Credentials: Credentials In Files | https://attack.mitre.org/techniques/T1552/001/ |
 
 #### Description
 
