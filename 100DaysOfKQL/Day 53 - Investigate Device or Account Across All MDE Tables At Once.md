@@ -2,9 +2,18 @@
 
 ## Query Information
 
-This query returns all Defender for Endpoint (MDE) related events for a target device or account.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/02/22 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| N/A | N/A | N/A |
 
 #### Description
 
