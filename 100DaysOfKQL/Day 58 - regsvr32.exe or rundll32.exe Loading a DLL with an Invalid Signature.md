@@ -1,10 +1,21 @@
-# *Non-Sucking Service Manager (nssm) Usage*
+# *regsvr32.exe or rundll32.exe Loading a DLL with an Invalid Signature*
 
 ## Query Information
 
-This query returns events where rundll32.exe or regsvr32.exe loads a DLL with an invalid signature.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/02/27 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1036.001 | Masquerading: Invalid Code Signature | https://attack.mitre.org/techniques/T1036/001/ |
+| T1218.010 | System Binary Proxy Execution: Regsvr32 | https://attack.mitre.org/techniques/T1218/010/ |
+| T1218.011 | System Binary Proxy Execution: Rundll32 | https://attack.mitre.org/techniques/T1218/011/ |
 
 #### Description
 
