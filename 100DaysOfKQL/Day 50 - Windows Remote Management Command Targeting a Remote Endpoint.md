@@ -2,9 +2,19 @@
 
 ## Query Information
 
-This query returns events where a Windows Remote Management (WinRM) command is targeting a remote endpoint.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/02/19 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1047 | Windows Management Instrumentation | https://attack.mitre.org/techniques/T1047/ |
+| T1021.006 | Remote Services: Windows Remote Management | https://attack.mitre.org/techniques/T1021/006/ |
 
 #### Description
 
