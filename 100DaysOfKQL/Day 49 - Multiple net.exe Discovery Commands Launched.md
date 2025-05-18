@@ -2,9 +2,21 @@
 
 ## Query Information
 
-This query returns events when multiple net.exe discovery commands are launched.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/02/18 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1087.001 | Account Discovery: Local Account | https://attack.mitre.org/techniques/T1087/001 |
+| T1087.002 | Account Discovery: Domain Account | https://attack.mitre.org/techniques/T1087/002 |
+| T1069.001 | Permission Groups Discovery: Local Groups | https://attack.mitre.org/techniques/T1069/001 |
+| T1069.002 | Permission Groups Discovery: Domain Groups | https://attack.mitre.org/techniques/T1069/002 |
 
 #### Description
 
