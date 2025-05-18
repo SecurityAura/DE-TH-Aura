@@ -2,9 +2,18 @@
 
 ## Query Information
 
-This query returns events when a network event involving a process associated with Python is observed.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/01/27 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1059.006 | Command and Scripting Interpreter: Python | https://attack.mitre.org/techniques/T1059/006/ |
 
 #### Description
 
