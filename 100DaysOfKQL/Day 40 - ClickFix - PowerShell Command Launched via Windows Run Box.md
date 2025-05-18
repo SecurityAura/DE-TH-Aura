@@ -2,9 +2,19 @@
 
 ## Query Information
 
-This query return events where a PowerShell command was launched via the Windows Run box.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/02/09 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1059.001 | Command and Scripting Interpreter: PowerShell | https://attack.mitre.org/techniques/T1059/001/ |
+| T1204.004 | User Execution: Malicious Copy and Paste | https://attack.mitre.org/techniques/T1204/004/ | 
 
 #### Description
 
