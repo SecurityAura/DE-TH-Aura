@@ -2,9 +2,18 @@
 
 ## Query Information
 
-This query looks for command line interpreters that were launched by Scheduled Tasks on Windows systems.
+#### Changelog
+| Date | Comments |
+|---|---|
+| 2025/01/05 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
 
-##
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1059 | External Remote Services | https://attack.mitre.org/techniques/T1059/ |
+| T1053.005 | Scheduled Task/Job: Scheduled Task | https://attack.mitre.org/techniques/T1053/005/ |
 
 #### Description
 
