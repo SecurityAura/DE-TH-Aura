@@ -2,9 +2,18 @@
 
 ## Query Information
 
-This query return events where the password of a newly created user may have been used in a subsequent command.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/01/21 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| N/A | N/A | N/A |
 
 #### Description
 
