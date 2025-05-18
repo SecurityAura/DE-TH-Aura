@@ -2,9 +2,19 @@
 
 ## Query Information
 
-This query return events where a command line interpreter is invoked by a Web Application process on Windows.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/02/07 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1190 | Exploit Public-Facing Application | https://attack.mitre.org/techniques/T1190/ |
+| T1505.003 | Server Software Component: Web Shell | https://attack.mitre.org/techniques/T1505/003/ |
 
 #### Description
 
