@@ -2,9 +2,18 @@
 
 ## Query Information
 
-This query look for file events where split and/or part file archives are involved.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/01/03 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1560.001 | Archive Collected Data: Archive via Utility | https://attack.mitre.org/techniques/T1560/001/ |
 
 #### Description
 
