@@ -2,9 +2,18 @@
 
 ## Query Information
 
-These queries returns events where a file with a misleading double extension is observed on a system.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/02/04 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1036.007 | Masquerading: Double File Extension | https://attack.mitre.org/techniques/T1036/007/ |
 
 #### Description
 
