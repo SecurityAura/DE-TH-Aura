@@ -2,9 +2,19 @@
 
 ## Query Information
 
-These queries returns events where BITS Jobs are observed through PowerShell or bitsadmin.exe
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/02/01 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1059.001 | Command and Scripting Interpreter: PowerShell | https://attack.mitre.org/techniques/T1059/001/ |
+| T1197 | BITS Jobs | https://attack.mitre.org/techniques/T1197/ |
 
 #### Description
 
