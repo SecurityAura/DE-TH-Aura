@@ -2,9 +2,19 @@
 
 ## Query Information
 
-This query return events where the PowerShell Invoke-WebRequest/IWR (shortened version) cmdlet or the WebClient class was used.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/01/15 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1059.001 | Command and Scripting Interpreter: PowerShell | https://attack.mitre.org/techniques/T1059/001/ |
+| T1105 | Ingress Tool Transfer | https://attack.mitre.org/techniques/T1105/ |
 
 #### Description
 
