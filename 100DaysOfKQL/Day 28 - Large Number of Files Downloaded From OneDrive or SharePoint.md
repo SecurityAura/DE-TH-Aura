@@ -2,9 +2,18 @@
 
 ## Query Information
 
-These queries returns events where a large number of files would have been downloaded from OneDrive or SharePoint.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/01/28 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1530 | Data from Cloud Storage | https://attack.mitre.org/techniques/T1530/ |
 
 #### Description
 
