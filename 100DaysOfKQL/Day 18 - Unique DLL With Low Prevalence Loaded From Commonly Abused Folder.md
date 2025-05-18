@@ -2,9 +2,18 @@
 
 ## Query Information
 
-This query returns events where unique DLLs with low prevalence that are loaded from commonly abused folders.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/01/01 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/18 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| N/A | N/A | N/A |
 
 #### Description
 
