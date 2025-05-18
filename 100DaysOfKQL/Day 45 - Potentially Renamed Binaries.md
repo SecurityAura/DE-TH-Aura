@@ -2,9 +2,18 @@
 
 ## Query Information
 
-This query returns events where a binary that was executed is potentially renamed.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/02/14 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1036 | Masquerading | https://attack.mitre.org/techniques/T1036/ |
 
 #### Description
 
