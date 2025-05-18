@@ -2,9 +2,18 @@
 
 ## Query Information
 
-This query return events which may indicates that CrackMapExec or secretsdump.py was used against a system.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/01/20 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1003.004 | OS Credential Dumping: LSA Secrets | https://attack.mitre.org/techniques/T1003/004/ |
 
 #### Description
 
