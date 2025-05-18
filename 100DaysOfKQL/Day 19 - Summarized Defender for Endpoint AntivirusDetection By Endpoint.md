@@ -2,9 +2,19 @@
 
 ## Query Information
 
-This query returns a summarized list of Antivirus detections by endpoint.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/01/01 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/19 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| N/A | N/A | N/A |
+
 
 #### Description
 
