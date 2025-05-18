@@ -2,9 +2,20 @@
 
 ## Query Information
 
-These queries returns events where a PSEXESVC service install was triggered by a remote system.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/01/29 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1543.003 | Create or Modify System Process: Windows Service | https://attack.mitre.org/techniques/T1543/003/ |
+| T1021.002 | Remote Services: SMB/Windows Admin Shares | https://attack.mitre.org/techniques/T1021/002/ |
+| T1569.002 | System Services: Service Execution | https://attack.mitre.org/techniques/T1569/002/ |
 
 #### Description
 
