@@ -2,9 +2,18 @@
 
 ## Query Information
 
-This query returns all successful sign-ins in Entra ID for the OfficeHome application with ASN enrichment on the IP the sign-in came from.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/01/12 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1566 | Phishing | https://attack.mitre.org/techniques/T1566/ |
 
 #### Description
 
