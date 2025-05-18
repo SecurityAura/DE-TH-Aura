@@ -2,9 +2,18 @@
 
 ## Query Information
 
-This query returns events where a workstation has a public IP address assigned to one of its network interfaces.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/01/23 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| N/A | N/A | N/A |
 
 #### Description
 
