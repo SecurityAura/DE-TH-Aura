@@ -2,9 +2,19 @@
 
 ## Query Information
 
-This query return events where a RDP session may have been opened through a tunnel on a Windows host.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/01/01 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1021.001 | Remote Services: Remote Desktop Protocol | https://attack.mitre.org/techniques/T1021/001/ |
+| T1572 | Protocol Tunneling | https://attack.mitre.org/techniques/T1572/ |
 
 #### Description
 
