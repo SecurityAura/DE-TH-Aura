@@ -2,9 +2,19 @@
 
 ## Query Information
 
-This query returns events where a DLL with a low prevalence was loaded from a user's Downloads folder, by a process also in the Downloads folder.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/01/09 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1204.002 | User Execution: Malicious File | https://attack.mitre.org/techniques/T1204/002/ |
+| T1574.001 | Hijack Execution Flow: DLL | https://attack.mitre.org/techniques/T1574/001/ |
 
 #### Description
 
