@@ -2,9 +2,20 @@
 
 ## Query Information
 
-This query returns a quick summarized view of processes that were launched through PowerShell Remoting.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/01/16 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1059.001 | Command and Scripting Interpreter: PowerShell | https://attack.mitre.org/techniques/T1059/001/ |
+| T1021.006 | Remote Services: Windows Remote Management | https://attack.mitre.org/techniques/T1021/006/ |
+
 
 #### Description
 
