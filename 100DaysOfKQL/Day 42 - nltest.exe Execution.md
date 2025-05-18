@@ -2,9 +2,20 @@
 
 ## Query Information
 
-This query returns events where nltest.exe was executed.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/02/11 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1482 | Domain Trust Discovery | https://attack.mitre.org/techniques/T1482 |
+| T1018 | Remote System Discovery | https://attack.mitre.org/techniques/T1018 |
+| T1016 | System Network Configuration Discovery | https://attack.mitre.org/techniques/T1016 |
 
 #### Description
 
