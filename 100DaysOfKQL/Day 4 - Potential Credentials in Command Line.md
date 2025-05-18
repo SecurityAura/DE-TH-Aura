@@ -2,9 +2,17 @@
 
 ## Query Information
 
-This query look for process execution events which may contain/have credentials (cleartext or not) in their command line.
+#### Changelog
+| Date | Comments |
+|---|---|
+| 2025/01/04 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
 
-##
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1552 | Unsecured Credentials | https://attack.mitre.org/techniques/T1552/ |
 
 #### Description
 
