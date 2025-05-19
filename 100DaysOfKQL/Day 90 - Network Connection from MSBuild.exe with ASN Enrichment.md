@@ -2,9 +2,18 @@
 
 ## Query Information
 
-This query returns events a network connection from MSBuild.exe is observed and enrich the ASN information on the remote IP involved.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/04/02 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1127.001 | Trusted Developer Utilities Proxy Execution: MSBuild | https://attack.mitre.org/techniques/T1127/001/ |
 
 #### Description
 
