@@ -2,9 +2,19 @@
 
 ## Query Information
 
-This query returns events a PowerShell process launches another PowerShell process that has an encoded command (-EncodedCommand) or vice-versa.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/03/21 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1059.001 | Command and Scripting Interpreter: PowerShell | https://attack.mitre.org/techniques/T1059/001/ |
+| T1027.010 | Obfuscated Files or Information: Command Obfuscation | https://attack.mitre.org/techniques/T1027/010/ |
 
 #### Description
 
