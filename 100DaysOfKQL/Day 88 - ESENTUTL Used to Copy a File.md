@@ -2,9 +2,19 @@
 
 ## Query Information
 
-This query returns events where ESENTUTL was used to copy a file.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/03/31 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1006 | Direct Volume Access | https://attack.mitre.org/techniques/T1006 |
+| T1003.003 | OS Credential Dumping: NTDS | https://attack.mitre.org/techniques/T1003/003 |
 
 #### Description
 
