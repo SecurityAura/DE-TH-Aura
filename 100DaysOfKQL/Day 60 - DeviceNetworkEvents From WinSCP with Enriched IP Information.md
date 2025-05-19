@@ -2,9 +2,18 @@
 
 ## Query Information
 
-This query returns events from network connections by WinSCP with enriched IP information.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/03/01 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1048 | Exfiltration Over Alternative Protocol | https://attack.mitre.org/techniques/T1048/ |
 
 #### Description
 
