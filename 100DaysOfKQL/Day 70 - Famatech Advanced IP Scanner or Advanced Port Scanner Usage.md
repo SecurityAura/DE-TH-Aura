@@ -2,9 +2,16 @@
 
 ## Query Information
 
-This query returns events where Famatech Advanced IP Scanner or Advanced Port Scanner is used.
+| Date | Comments |
+|---|---|
+| 2025/03/12 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
 
-##
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1046 | Network Service Discovery | https://attack.mitre.org/techniques/T1046/ |
 
 #### Description
 
