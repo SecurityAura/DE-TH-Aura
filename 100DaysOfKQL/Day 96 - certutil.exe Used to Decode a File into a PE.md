@@ -2,9 +2,18 @@
 
 ## Query Information
 
-This query return events where certutil.exe is used to decode a file into a PE.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/01/01 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1140 | Deobfuscate/Decode Files or Information | https://attack.mitre.org/techniques/T1140/ |
 
 #### Description
 
