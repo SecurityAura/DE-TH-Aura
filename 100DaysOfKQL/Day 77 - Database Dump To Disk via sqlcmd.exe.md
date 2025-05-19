@@ -2,9 +2,18 @@
 
 ## Query Information
 
-This query returns events where sqlcmd.exe is used to dump the content of a database.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/03/19 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1213 | Data from Information Repositories | https://attack.mitre.org/techniques/T1213/ |
 
 #### Description
 
