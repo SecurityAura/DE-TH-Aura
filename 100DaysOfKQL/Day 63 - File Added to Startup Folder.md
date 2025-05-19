@@ -2,9 +2,18 @@
 
 ## Query Information
 
-This query returns events where a file was added to Windows' Startup folder.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/03/04 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1547.001 | Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder | https://attack.mitre.org/techniques/T1547/001/ |
 
 #### Description
 
