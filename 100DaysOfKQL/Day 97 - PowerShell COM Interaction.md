@@ -2,9 +2,19 @@
 
 ## Query Information
 
-This query return events where PowerShell interacts with a Component Object Model (COM).
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/04/08 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1059.001 | Command and Scripting Interpreter: PowerShell | https://attack.mitre.org/techniques/T1059/001/ |
+| T1559.001 | Inter-Process Communication: Component Object Model | https://attack.mitre.org/techniques/T1559/001/ |
 
 #### Description
 
