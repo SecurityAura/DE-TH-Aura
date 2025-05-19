@@ -6,7 +6,7 @@
 
 | Date | Comments |
 |---|---|
-| 2025/01/01 | Initial version (part of #100DaysOfKQL) |
+| 2025/04/08 | Initial version (part of #100DaysOfKQL) |
 | 2025/05/17 | Added MITRE ATT&CK and Changelog |
 
 #### MITRE ATT&CK Technique(s)
