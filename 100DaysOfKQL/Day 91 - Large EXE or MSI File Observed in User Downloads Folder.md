@@ -2,9 +2,18 @@
 
 ## Query Information
 
-This query returns events when a large EXE or MSI file is observed in a user's Downloads folder.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/04/03 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1027.001 | Obfuscated Files or Information: Binary Padding | https://attack.mitre.org/techniques/T1027/001/ |
 
 #### Description
 
