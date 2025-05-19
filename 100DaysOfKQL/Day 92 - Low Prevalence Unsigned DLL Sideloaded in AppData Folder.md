@@ -14,6 +14,7 @@
 | Technique ID | Title    | Link    |
 | ---  | --- | --- |
 | T1574.001 | Hijack Execution Flow: DLL | https://attack.mitre.org/techniques/T1574/001/ |
+| T1036.001 | Masquerading: Invalid Code Signature | https://attack.mitre.org/techniques/T1036/001/ |
 
 #### Description
 
