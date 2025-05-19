@@ -2,9 +2,18 @@
 
 ## Query Information
 
-This query return events where a LDAP Bind account attempts to authenticate to an endpoint other than a DC.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/04/06 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1078.002 | Valid Accounts: Domain Accounts | https://attack.mitre.org/techniques/T1078/002/ |
 
 #### Description
 
