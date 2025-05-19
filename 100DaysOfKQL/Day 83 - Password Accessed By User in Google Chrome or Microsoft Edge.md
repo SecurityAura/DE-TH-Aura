@@ -2,9 +2,18 @@
 
 ## Query Information
 
-This query returns events where a password saved in the Password Manager was potentially accessed by a user.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/03/25 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1555 | Credentials from Password Stores: Credentials from Web Browsers | https://attack.mitre.org/techniques/T1555/003/ |
 
 #### Description
 
