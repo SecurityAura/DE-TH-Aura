@@ -2,9 +2,21 @@
 
 ## Query Information
 
-This query returns events where a command line interpreter is spawned by services.exe.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/03/30 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1059.001 | Command and Scripting Interpreter: PowerShell | https://attack.mitre.org/techniques/T1059/001/ |
+| T1059.003 | Command and Scripting Interpreter: Windows Command Shell | https://attack.mitre.org/techniques/T1059/001/ |
+| T1569.002 | System Services: Service Execution | https://attack.mitre.org/techniques/T1569/002/ |
+| T1543.003 | Create or Modify System Process: Windows Service | https://attack.mitre.org/techniques/T1543/003/ |
 
 #### Description
 
