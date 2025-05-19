@@ -2,9 +2,18 @@
 
 ## Query Information
 
-This query returns events where mshta.exe executes a raw script from the command line.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/03/22 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1218.005 | System Binary Proxy Execution: Mshta | https://attack.mitre.org/techniques/T1218/005/ |
 
 #### Description
 
