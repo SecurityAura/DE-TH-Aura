@@ -2,9 +2,18 @@
 
 ## Query Information
 
-This query returns events where a network connection comes from an IP address located in a VPN range.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/03/06 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1133 | External Remote Services | https://attack.mitre.org/techniques/T1133/ |
 
 #### Description
 
