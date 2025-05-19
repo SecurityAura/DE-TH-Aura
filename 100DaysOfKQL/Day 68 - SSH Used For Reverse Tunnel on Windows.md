@@ -1,10 +1,18 @@
 # *SSH Used For Reverse Tunnel on Windows*
 
-## Query Information
+#### Changelog
 
-This query returns events where SSH (on Windows) is used to set up a reverse tunnel.
+| Date | Comments |
+|---|---|
+| 2025/03/09 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
 
-##
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1572 | Protcol Tunneling | https://attack.mitre.org/techniques/T1572/ |
+| T1021.004 | Remote Services: SSH | https://attack.mitre.org/techniques/T1021/004/ |
 
 #### Description
 
