@@ -2,9 +2,18 @@
 
 ## Query Information
 
-This query returns events where a process with a low prevalence loads a CLR DLL.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/03/26 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1620 | Reflective Code Loading | https://attack.mitre.org/techniques/T1620/ |
 
 #### Description
 
