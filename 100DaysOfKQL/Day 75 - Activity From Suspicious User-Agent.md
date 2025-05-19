@@ -2,9 +2,18 @@
 
 ## Query Information
 
-This query returns events from suspicious user-agent in Entra ID/Microsoft 365.
+#### Changelog
 
-##
+| Date | Comments |
+|---|---|
+| 2025/03/17 | Initial version (part of #100DaysOfKQL) |
+| 2025/05/17 | Added MITRE ATT&CK and Changelog |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| N/A | N/A | N/A |
 
 #### Description
 
