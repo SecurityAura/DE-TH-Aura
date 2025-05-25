@@ -8,12 +8,13 @@
 |---|---|
 | 2025/01/17 | Initial version (part of #100DaysOfKQL) |
 | 2025/05/17 | Added MITRE ATT&CK and Changelog |
+| 2025/05/25 | Added MITRE ATT&CK |
 
 #### MITRE ATT&CK Technique(s)
 
 | Technique ID | Title    | Link    |
 | ---  | --- | --- |
-| N/A | N/A | N/A |
+| T1105 | Ingress Tool Transfer | https://attack.mitre.org/techniques/T1105/ |
 
 #### Description
 
