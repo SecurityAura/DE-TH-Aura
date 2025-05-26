@@ -65,6 +65,7 @@ DeviceFileEvents
 | extend FileExtension = tostring(strcat((split(FileName,".")[-2]),".",strcat(split(FileName,".")[-1])))
 | where FileExtension has_any (FileExtensions)
 | where FileExtension endswith "lnk"
+| where FileName !endswith ".lnk" //remove false-positives for shortcuts (the above line is not enought)
 | where FolderPath matches regex @'(?i)\\Users\\[^\\]+\\AppData\\Local\\Temp\\(.*)?'
     or FolderPath matches regex @"(?i)\\Users\\[^\\]+\\Downloads\\(.*)?"
     or FolderPath matches regex @"(?i)\\Users\\[^\\]+\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.Outlook\\[^\\]+\\(.*)?"
