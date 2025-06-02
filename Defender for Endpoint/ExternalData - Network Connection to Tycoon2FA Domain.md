@@ -53,7 +53,7 @@ DeviceNetworkEvents
     or Query has_any (Tycoon2FADomains)
 ```
 ## Microsoft Sentinel ##
-### Query 1 - Defender for Endpoint (MDE) via DeviceLogonEvents ###
+### Defender for Endpoint (MDE) via DeviceNetworkEvents ###
 ```KQL
 let Tycoon2FADomains = externaldata (Domain:string)
 ["https://raw.githubusercontent.com/NoMorePhish/Tycoon2FADomains/refs/heads/main/MaliciousDomains"]
