@@ -18,6 +18,8 @@
 
 #### Description
 
+DISCLAIMER: This command will only catch "reverse-shell"-like commands executed through WMI if they are wrapped in a cmd.exe (e.g.: cmd.exe /c whoami.exe > C:\Temp\wmi_whoami.txt)
+
 This query returns events WmiPrvSE.exe (Windows Management Instrumentation) launched a command executed remotely.
 
 The query below is a deeper dive on this bullet point from Day 51 query (therefore, refer to its description for what you're looking for here and how it can be (ab)used by threat actors):
