@@ -62,5 +62,5 @@ DeviceImageLoadEvents
 | where InitiatingProcessFolderPath matches regex @"(?i)C\:\\Users\\[^\\]+\\AppData\\(Local|Roaming)\\[^\\]+\\[^\\]+$"
 | where FolderPath matches regex @"(?i)C\:\\Users\\[^\\]+\\AppData\\(Local|Roaming)\\[^\\]+\\[^\\]+$"
 | where FileName endswith ".dll"
-| join UnsignedLowPrevDLLs on SHA1
+| join kind=inner UnsignedLowPrevDLLs on SHA1
 ```
