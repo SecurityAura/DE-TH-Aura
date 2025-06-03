@@ -67,5 +67,5 @@ let UnsignedLowPrevFiles = (DeviceImageLoadEvents
 | where GlobalPrevalence < GlobalPrevalenceThreshold);
 DeviceImageLoadEvents
 | where InitiatingProcessFileName in~ ("regsvr32.exe", "rundll32.exe")
-| join UnsignedLowPrevFiles on SHA1
+| join kind=inner UnsignedLowPrevFiles on SHA1
 ```
