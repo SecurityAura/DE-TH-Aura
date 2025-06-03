@@ -57,5 +57,5 @@ let LowPrevProcessesLoadingCLRDLLs = (
 );
 DeviceImageLoadEvents
 | where FileName in~ ("clr.dll", "clrjit.dll", "mscoree.dll", "mscorlib.dll", "mscoreei.dll", "mscorlib.ni.dll")
-| join LowPrevProcessesLoadingCLRDLLs on InitiatingProcessSHA1
+| join kind=inner LowPrevProcessesLoadingCLRDLLs on InitiatingProcessSHA1
 ```
