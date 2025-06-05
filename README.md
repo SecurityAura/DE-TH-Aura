@@ -6,7 +6,7 @@
 
 ## #100DaysOfKQL Challenge
 
-As of 2025/01/01, a new folder was added for my #100DaysOfKQL challenge. Queries from this challenge will be added there and at some point, after the challenge ends, I'll move them around in the repo in their appropriate sections. I haven't fully thought out the architecture yet.
+From 2025/01/01 to 2025/04/12, a new folder was added for my #100DaysOfKQL challenge. Queries from this challenge will be added there and at some point, after the challenge ends, I'll move them around in the repo in their appropriate sections. I haven't fully thought out the architecture yet.
 
 For more information about my #100DaysOfKQL challenge, see the following Twitter thread:
 
@@ -36,6 +36,12 @@ Some queries can be very basic and some can be advanced. The thing with crafting
 Therefore, expect some changes over time to the queries I post here, because it's never guaranteed that their initial release will be the "final" version. To assist with this, at some point, I'll add a "Query Last Modified" section on each page (a bit like some other people are doing in their KQL repos).
 
 As always, if you have any questions or else about this repo and/or the queries, feel free to drop me a DM on one of the social medias listed above!
+
+## KQL Writing Style
+
+There are two things you should know about how I personally write my KQL queries. The first one, is that I tend to write my KQL top-to-bottom, which means, I will usually write a query that uses more lines, but that you can easily read from smaller display box. Like the Microsoft Sentinel Analytic Rule right-pane for instance.
+
+The second one is that I will rarely add any project, project-order, project-rename, distinct, etc. to my queries in order to clean-up the results, put the emphasis on the "important stuff", etc. I feel like choosing which columns you want to see, in which order and also which columns you may want to highlight one is a personal choice that belongs to everybody. You're the only one that knows how you would like the results to be displayed or clustered, hence I'm leaving this up to you. I may have a preference in how I want my project-reorder to be for MDE's DeviceProcessEvents for instance, but it does not mean that you'll have the same preference as me, and I don't want to constraint you in using it. I may still use it for some queries where it's relevant but in the most part, I'm going to leave it up to you, the person who reads, executes and analyze the query to add these.
 
 ## Credits
 
