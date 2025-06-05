@@ -39,9 +39,11 @@ As always, if you have any questions or else about this repo and/or the queries,
 
 ## KQL Writing Style
 
-There are two things you should know about how I personally write my KQL queries. The first one, is that I tend to write my KQL top-to-bottom, which means, I will usually write a query that uses more lines, but that you can easily read from smaller display box. Like the Microsoft Sentinel Analytic Rule right-pane for instance.
+There are three things you should know about how I personally write my KQL queries. The first one, is that I tend to write my KQL top-to-bottom, which means, I will usually write a query that uses more lines, but that you can easily read from smaller display box. Like the Microsoft Sentinel Analytic Rule right-pane for instance.
 
 The second one is that I will rarely add any project, project-order, project-rename, distinct, etc. to my queries in order to clean-up the results, put the emphasis on the "important stuff", etc. I feel like choosing which columns you want to see, in which order and also which columns you may want to highlight one is a personal choice that belongs to everybody. You're the only one that knows how you would like the results to be displayed or clustered, hence I'm leaving this up to you. I may have a preference in how I want my project-reorder to be for MDE's DeviceProcessEvents for instance, but it does not mean that you'll have the same preference as me, and I don't want to constraint you in using it. I may still use it for some queries where it's relevant but in the most part, I'm going to leave it up to you, the person who reads, executes and analyze the query to add these.
+
+And the third one is that I ABUSE let statements (KQL variables) to define ANYTHING which I think can be expanded upon in the future (e.g.: a variable holding processes associated with discovery activity). Maybe even variables that should be adjusted (e.g.: threshold-based queries) and/or for which values can change depending on the context in which you want to execute them. It also as a side-effect of acting like a quick overview of the "parameters" a query will be using, which may makes it more easy to understand before even getting to the KQL underneath.
 
 ## Credits
 
