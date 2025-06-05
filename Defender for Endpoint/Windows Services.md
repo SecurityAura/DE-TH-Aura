@@ -74,7 +74,7 @@ DeviceProcessEvents
 | where ProcessCommandLine in~ ("svchost.exe",'"svchost.exe"')
 ```
 ### Query #5 - Defender for Endpoint (MDE) via DeviceEvents - Rare Windows Service Install Across Devices Based on ServiceName ###
-```
+```KQL
 // Adjust the threshold accordingly
 let DeviceThreshold = 5;
 DeviceEvents
@@ -91,7 +91,7 @@ DeviceEvents
 | where DeviceCount < DeviceThreshold
 ```
 ### Query #6 - Defender for Endpoint (MDE) via DeviceProcessEvents, DeviceEvents - Windows Service Installed and/or Executed from a Temporary Folder ###
-```
+```KQL
 let WindowsServiceInstallTemp = (
     DeviceEvents
     | where TimeGenerated > ago(90d)
@@ -143,7 +143,7 @@ DeviceProcessEvents
 | where ProcessCommandLine in~ ("svchost.exe",'"svchost.exe"')
 ```
 ### Query #5 - Defender for Endpoint (MDE) via DeviceEvents - Rare Windows Service Install Across Devices Based on ServiceName ###
-```
+```KQL
 // Adjust the threshold accordingly
 let DeviceThreshold = 5;
 DeviceEvents
@@ -160,7 +160,7 @@ DeviceEvents
 | where DeviceCount < DeviceThreshold
 ```
 ### Query #6 - Defender for Endpoint (MDE) via DeviceProcessEvents, DeviceEvents - Windows Service Installed and/or Executed from a Temporary Folder ###
-```
+```KQL
 let WindowsServiceInstallTemp = (
     DeviceEvents
     | where TimeGenerated > ago(90d)
