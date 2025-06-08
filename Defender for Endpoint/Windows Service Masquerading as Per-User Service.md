@@ -44,7 +44,7 @@ False positives are possible on certain services from what I've seen, such as Re
 - Defender for Endpoint (MDE) - 1 query
 
 ## Microsoft Defender XDR ##
-### Defender for Endpoint (MDE) via DeviceEvents - ServiceInstalled Events ###
+### Defender for Endpoint (MDE) via DeviceEvents ###
 ```KQL
 DeviceEvents
 | where ActionType == "ServiceInstalled"
@@ -54,7 +54,7 @@ DeviceEvents
 | where ServiceBinPath !in~ ("C:\\WINDOWS\\System32\\svchost.exe", "C:\\Windows\\System32\\CredentialEnrollmentManager.exe")
 ```
 ## Microsoft Defender Sentinel ##
-### Defender for Endpoint (MDE) via DeviceEvents - ServiceInstalled Events ###
+### Defender for Endpoint (MDE) via DeviceEvents ###
 ```KQL
 DeviceEvents
 | where ActionType == "ServiceInstalled"
