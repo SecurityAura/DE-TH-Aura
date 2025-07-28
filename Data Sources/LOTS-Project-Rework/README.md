@@ -61,11 +61,11 @@ Here's the base KQL to use that CSV via externaldata(). What you do after is up 
 ```KQL
 let LOTS = externaldata(id: int, website: string, status: string, site_status: string, site_status_offline_reason: string, status_last_checked: string, source: string, tags: string, 
                         command_and_control: string, cli: string, download: string, exfiltration: string, paste: string, phishing: string, shortener: string, temporary: string, samples: string,
-                        contributor: string, service_provider: string, created_at: string, updated_at: string, UnifiedDescription: string)
+                        contributor: string, service_provider: string, created_at: string, updated_at: string, UnifiedDescription: dynamic)
 [@"https://raw.githubusercontent.com/SecurityAura/DE-TH-Aura/refs/heads/main/Data%20Sources/LOTS-Project-Rework/LOTS-Project-Rework.csv"]
 with (format=csv, ignoreFirstRecord=true)
 // Feel free to uncomment the line below if you want one record PER description from UnifiedDescription
-//| mv-expand todynamic(UnifiedDescription)
+//| mv-expand UnifiedDescription
 // Uncomment the line below if you want to remove the prefix *. from sites that have them, so that they can be used with has, has_any(), etc. afterwards.
 //| extend website = iff (website startswith "*.", trim_start(@'\*\.', website), website)
 ;
