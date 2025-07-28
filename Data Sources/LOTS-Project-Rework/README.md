@@ -68,7 +68,6 @@ with (format=csv, ignoreFirstRecord=true)
 //| mv-expand todynamic(UnifiedDescription)
 // Uncomment the line below if you want to remove the prefix *. from sites that have them, so that they can be used with has, has_any(), etc. afterwards.
 //| extend website = iff (website startswith "*.", trim_start(@'\*\.', website), website)
-//| distinct Website
 ;
 LOTS
 ```
