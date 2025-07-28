@@ -72,6 +72,10 @@ with (format=csv, ignoreFirstRecord=true)
 LOTS
 ```
 
+# How to contribute #
+
+Since I currently generate the CSV using a weird dirty PowerShell script I whipped up, if you have any modifications, suggestions, improvements, etc. you would like to see for the CSV, please open an Issue and I'll make the adjustements. I'll figure out how to add an Issue template for this specifically to make it easier and also detail how to submit new entries (if people want to submit them).
+
 # Special Thanks #
 
 The rework of LOTS-Project would not have been possible without these precious resources:
