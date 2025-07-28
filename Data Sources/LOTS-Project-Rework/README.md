@@ -94,3 +94,4 @@ The rework of LOTS-Project would not have been possible without these precious r
 - @svch0st who provided me a huge list of domains/sites he encountered and could be classified as LOTS
 - ANY.RUN and their new Threat Intelligence Lookup service, which allowed to me search for some domains/sites to see if they did fit some tags
 - urlscan.io which allowed me to search for domains/sites to see if they did fit some tags, and if these domains/sites were still active (recently submitted and accessible)
+- abuse.ch and URLhaus to lookup various domain/site and see if they had any submissions on the platform, that are used as "Samples" to prove that a domain/site fits a certain tag
