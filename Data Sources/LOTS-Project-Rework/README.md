@@ -54,6 +54,24 @@ The reason why I added these tags is to make it easier to target certain sites/d
 
 More tags MAY be added in the future depending on, honestly, my needs, but also suggestions if they make sense.
 
+# KQL #
+
+Here's the base KQL to use that CSV via externaldata(). What you do after is up to you! I'll be posting/providing more KQL queries leveraging that data soon.
+
+```KQL
+let LOTS = externaldata(id: int, website: string, status: string, site_status: string, site_status_offline_reason: string, status_last_checked: string, source: string, tags: string, 
+                        command_and_control: string, cli: string, download: string, exfiltration: string, paste: string, phishing: string, shortener: string, temporary: string, samples: string,
+                        contributor: string, service_provider: string, created_at: string, updated_at: string, UnifiedDescription: string)
+[@"https://raw.githubusercontent.com/SecurityAura/DE-TH-Aura/refs/heads/main/Data%20Sources/LOTS-Project-Rework/LOTS-Project-Rework.csv"]
+with (format=csv, ignoreFirstRecord=true)
+// Feel free to uncomment the line below if you want one record PER description from UnifiedDescription
+//| mv-expand todynamic(UnifiedDescription);
+// Uncomment the line below if you want to remove the prefix *. from sites that have them, so that they can be used with has, has_any(), etc. afterwards.
+//| extend website = iff (website startswith "*.", trim_start(@'\*\.', website), website)
+//| distinct Website;
+LOTS
+```
+
 # Special Thanks #
 
 The rework of LOTS-Project would not have been possible without these precious resources:
