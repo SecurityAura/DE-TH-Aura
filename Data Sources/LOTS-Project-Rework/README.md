@@ -72,6 +72,16 @@ with (format=csv, ignoreFirstRecord=true)
 LOTS
 ```
 
+# Next Steps #
+
+While the CSV in its current format is usable, I would like to improve it as a bit:
+
+- Remove the standalone "description"-like columns and only leave the UnifiedDescription one. I'm generating it on my end using a PS1 script anyway.
+- JSONify the Samples column to make it so that EACH tag has one Sample (or reference) to basically "validate" that tag for the domain/site
+- Add LOTS from other sources which I've already identified, but haven't gone through the process of reviewing yet
+- Add an Issue template for that CSV for people that want to suggest additions, modifications, etc.
+- Potentially incorporate new tags?
+
 # How to contribute #
 
 Since I currently generate the CSV using a weird dirty PowerShell script I whipped up, if you have any modifications, suggestions, improvements, etc. you would like to see for the CSV, please open an Issue and I'll make the adjustements. I'll figure out how to add an Issue template for this specifically to make it easier and also detail how to submit new entries (if people want to submit them).
