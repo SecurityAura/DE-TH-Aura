@@ -65,10 +65,11 @@ let LOTS = externaldata(id: int, website: string, status: string, site_status: s
 [@"https://raw.githubusercontent.com/SecurityAura/DE-TH-Aura/refs/heads/main/Data%20Sources/LOTS-Project-Rework/LOTS-Project-Rework.csv"]
 with (format=csv, ignoreFirstRecord=true)
 // Feel free to uncomment the line below if you want one record PER description from UnifiedDescription
-//| mv-expand todynamic(UnifiedDescription);
+//| mv-expand todynamic(UnifiedDescription)
 // Uncomment the line below if you want to remove the prefix *. from sites that have them, so that they can be used with has, has_any(), etc. afterwards.
 //| extend website = iff (website startswith "*.", trim_start(@'\*\.', website), website)
-//| distinct Website;
+//| distinct Website
+;
 LOTS
 ```
 
