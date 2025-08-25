@@ -29,3 +29,5 @@ Matt Zorich - https://learnsentinel.blog/ - @reprise_99
 Invictus IR - https://www.invictus-ir.com/news - @InvictusIR
 
 Dylan - https://attackthesoc.com/posts/ - @DylanInfosec
+
+Damien van der Linden - https://www.lindensec.com/ - @LindenSec
