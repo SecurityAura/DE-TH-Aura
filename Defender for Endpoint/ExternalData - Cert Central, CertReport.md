@@ -115,7 +115,7 @@ DeviceFileEvents
 | project-reorder DeviceName, SHA1, FolderPath, CertSerialMatchesCertReport, CRSerial, CertificateSerialNumber, CRSigner, Signer, SignerHash, CRThumbprint
 ```
 ### Defender for Endpoint (MDE) via DeviceFileCertificateInfo, DeviceProcessEvents, DeviceEvents
-```
+```KQL
 let CertReport = (externaldata(CRHash: string, CRMalware: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
     [@"https://certcentral.org/api/download_csv"]
     with (format=csv))
@@ -208,7 +208,7 @@ DeviceFileEvents
 | project-reorder DeviceName, SHA1, FolderPath, CertSerialMatchesCertReport, CRSerial, CertificateSerialNumber, CRSigner, Signer, SignerHash, CRThumbprint
 ```
 ### Defender for Endpoint (MDE) via DeviceFileCertificateInfo, DeviceProcessEvents, DeviceEvents
-```
+```KQL
 let CertReport = (externaldata(CRHash: string, CRMalware: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
     [@"https://certcentral.org/api/download_csv"]
     with (format=csv))
