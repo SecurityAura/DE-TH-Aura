@@ -7,6 +7,7 @@
 | Date | Comments |
 |---|---|
 | 2025/06/17 | Initial version |
+| 2025/08/24 | Added the wide DeviceFileCertificateInfo detection/hunt |
 
 #### MITRE ATT&CK Technique(s)
 
@@ -42,12 +43,12 @@ Since "matches regex" is used to identify files at certain paths, depending on t
 
 ### Queries Overview ###
 
-- Defender for Endpoint (MDE) - 4 queries
+- Defender for Endpoint (MDE) - 5 queries
 
 ## Defender XDR ##
 ### Defender for Endpoint (MDE) via DeviceProcessEvents, DeviceImageLoadEvents, DeviceFileEvents (ALL-IN-ONE QUERY) ###
 ```KQL
-let CertReport = (externaldata(CRHash:string, CRMalware: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string)
+let CertReport = (externaldata(CRHash:string, CRMalware: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
 [@"https://certcentral.org/api/download_csv"]
 with (format=csv))
 | extend CRSerial = tolower(CRSerial);
@@ -64,7 +65,7 @@ union DeviceProcessEvents, DeviceImageLoadEvents, DeviceFileEvents
 ```
 ### Defender for Endpoint (MDE) via DeviceProcessEvents ###
 ```KQL
-let CertReport = (externaldata(CRHash:string, CRMalware: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string)
+let CertReport = (externaldata(CRHash:string, CRMalware: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
 [@"https://certcentral.org/api/download_csv"]
 with (format=csv))
 | extend CRSerial = tolower(CRSerial);
@@ -81,7 +82,7 @@ DeviceProcessEvents
 ```
 ### Defender for Endpoint (MDE) via DeviceImageLoadEvents ###
 ```KQL
-let CertReport = (externaldata(CRHash:string, CRMalware: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string)
+let CertReport = (externaldata(CRHash:string, CRMalware: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
 [@"https://certcentral.org/api/download_csv"]
 with (format=csv))
 | extend CRSerial = tolower(CRSerial);
@@ -98,7 +99,7 @@ DeviceImageLoadEvents
 ```
 ### Defender for Endpoint (MDE) via DeviceFileEvents ###
 ```KQL
-let CertReport = (externaldata(CRHash:string, CRMalware: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string)
+let CertReport = (externaldata(CRHash:string, CRMalware: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
 [@"https://certcentral.org/api/download_csv"]
 with (format=csv))
 | extend CRSerial = tolower(CRSerial);
@@ -112,11 +113,35 @@ DeviceFileEvents
 | join CertReport on $left.Signer == $right.CRSigner
 | extend CertSerialMatchesCertReport = iif( CertificateSerialNumber == CRSerial, "TRUE", "FALSE")
 | project-reorder DeviceName, SHA1, FolderPath, CertSerialMatchesCertReport, CRSerial, CertificateSerialNumber, CRSigner, Signer, SignerHash, CRThumbprint
+```
+### Defender for Endpoint (MDE) via DeviceFileCertificateInfo, DeviceProcessEvents, DeviceEvents
+```
+let CertReport = (externaldata(CRHash: string, CRMalware: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
+    [@"https://certcentral.org/api/download_csv"]
+    with (format=csv))
+    | extend CRSerial = tolower(CRSerial);
+let PresentCertificateSigners = materialize(
+    DeviceFileCertificateInfo
+    | distinct Signer, CertificateSerialNumber
+    | join CertReport on $left.Signer == $right.CRSigner
+    | extend CertSerialMatchesCertReport = iif( CertificateSerialNumber == CRSerial, "TRUE", "FALSE")
+    // If you only want to match on Signer name, which is more suited for hunting potential new certificate rather than detecting files with known Signers in Cert Central, change the value to FALSE.
+    | where CertSerialMatchesCertReport == "TRUE"
+    | distinct Signer);
+let Hashes = materialize (
+    DeviceFileCertificateInfo
+    | where Signer in (PresentCertificateSigners)
+    | distinct SHA1);
+let Files = (
+    union DeviceProcessEvents, DeviceFileEvents
+    | where SHA1 in (Hashes)
+    | join DeviceFileCertificateInfo on SHA1);
+Files
 ```
 ## Microsoft Sentinel ##
 ### Defender for Endpoint (MDE) via DeviceProcessEvents, DeviceImageLoadEvents, DeviceFileEvents (ALL-IN-ONE QUERY) ###
 ```KQL
-let CertReport = (externaldata(CRHash:string, CRMalware: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string)
+let CertReport = (externaldata(CRHash:string, CRMalware: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
 [@"https://certcentral.org/api/download_csv"]
 with (format=csv))
 | extend CRSerial = tolower(CRSerial);
@@ -133,7 +158,7 @@ union DeviceProcessEvents, DeviceImageLoadEvents, DeviceFileEvents
 ```
 ### Defender for Endpoint (MDE) via DeviceProcessEvents ###
 ```KQL
-let CertReport = (externaldata(CRHash:string, CRMalware: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string)
+let CertReport = (externaldata(CRHash:string, CRMalware: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
 [@"https://certcentral.org/api/download_csv"]
 with (format=csv))
 | extend CRSerial = tolower(CRSerial);
@@ -150,7 +175,7 @@ DeviceProcessEvents
 ```
 ### Defender for Endpoint (MDE) via DeviceImageLoadEvents ###
 ```KQL
-let CertReport = (externaldata(CRHash:string, CRMalware: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string)
+let CertReport = (externaldata(CRHash:string, CRMalware: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
 [@"https://certcentral.org/api/download_csv"]
 with (format=csv))
 | extend CRSerial = tolower(CRSerial);
@@ -167,7 +192,7 @@ DeviceImageLoadEvents
 ```
 ### Defender for Endpoint (MDE) via DeviceFileEvents ###
 ```KQL
-let CertReport = (externaldata(CRHash:string, CRMalware: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string)
+let CertReport = (externaldata(CRHash:string, CRMalware: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
 [@"https://certcentral.org/api/download_csv"]
 with (format=csv))
 | extend CRSerial = tolower(CRSerial);
@@ -181,4 +206,28 @@ DeviceFileEvents
 | join CertReport on $left.Signer == $right.CRSigner
 | extend CertSerialMatchesCertReport = iif( CertificateSerialNumber == CRSerial, "TRUE", "FALSE")
 | project-reorder DeviceName, SHA1, FolderPath, CertSerialMatchesCertReport, CRSerial, CertificateSerialNumber, CRSigner, Signer, SignerHash, CRThumbprint
+```
+### Defender for Endpoint (MDE) via DeviceFileCertificateInfo, DeviceProcessEvents, DeviceEvents
+```
+let CertReport = (externaldata(CRHash: string, CRMalware: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
+    [@"https://certcentral.org/api/download_csv"]
+    with (format=csv))
+    | extend CRSerial = tolower(CRSerial);
+let PresentCertificateSigners = materialize(
+    DeviceFileCertificateInfo
+    | distinct Signer, CertificateSerialNumber
+    | join CertReport on $left.Signer == $right.CRSigner
+    | extend CertSerialMatchesCertReport = iif( CertificateSerialNumber == CRSerial, "TRUE", "FALSE")
+    // If you only want to match on Signer name, which is more suited for hunting potential new certificate rather than detecting files with known Signers in Cert Central, change the value to FALSE.
+    | where CertSerialMatchesCertReport == "TRUE"
+    | distinct Signer);
+let Hashes = materialize (
+    DeviceFileCertificateInfo
+    | where Signer in (PresentCertificateSigners)
+    | distinct SHA1);
+let Files = (
+    union DeviceProcessEvents, DeviceFileEvents
+    | where SHA1 in (Hashes)
+    | join DeviceFileCertificateInfo on SHA1);
+Files
 ```
