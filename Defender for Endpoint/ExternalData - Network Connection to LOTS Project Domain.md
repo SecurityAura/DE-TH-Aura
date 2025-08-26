@@ -41,7 +41,7 @@ https://lots-project.com/
 ### Defender for Endpoint (MDE) via DeviceNetworkEvents ###
 ```KQL
 let LOTS = externaldata(Website: string, Tags: string, ServiceProvider: string, Created: date, LastUpdate: date, Credits: string)
-[@"https://raw.githubusercontent.com/SecurityAura/DE-TH-Aura/refs/heads/main/Data%20Sources/LOTS-Project-Rework.csv"]
+[@""https://raw.githubusercontent.com/SecurityAura/DE-TH-Aura/refs/heads/main/Data%20Sources/LOTS-Project-Rework/LOTS-Project-Rework.csv"]
 with (format=csv)
 | extend Website = iff (Website startswith "*.", trim_start(@'\*\.', Website), Website)
 | distinct Website;
@@ -57,7 +57,7 @@ DeviceNetworkEvents
 ### Defender for Endpoint (MDE) via DeviceNetworkEvents ###
 ```KQL
 let LOTS = externaldata(Website: string, Tags: string, ServiceProvider: string, Created: date, LastUpdate: date, Credits: string)
-[@"https://raw.githubusercontent.com/SecurityAura/DE-TH-Aura/refs/heads/main/Data%20Sources/LOTS-Project-Rework.csv"]
+[@""https://raw.githubusercontent.com/SecurityAura/DE-TH-Aura/refs/heads/main/Data%20Sources/LOTS-Project-Rework/LOTS-Project-Rework.csv"]
 with (format=csv)
 | extend Website = iff (Website startswith "*.", trim_start(@'\*\.', Website), Website)
 | distinct Website;
