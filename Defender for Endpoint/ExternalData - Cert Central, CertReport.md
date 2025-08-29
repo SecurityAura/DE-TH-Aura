@@ -135,7 +135,7 @@ let Hashes = materialize (
 let Files = (
     union DeviceProcessEvents, DeviceFileEvents
     | where SHA1 in (Hashes)
-    | join DeviceFileCertificateInfo on SHA1);
+    | join kind=inner DeviceFileCertificateInfo on SHA1);
 Files
 ```
 ## Microsoft Sentinel ##
@@ -228,6 +228,6 @@ let Hashes = materialize (
 let Files = (
     union DeviceProcessEvents, DeviceFileEvents
     | where SHA1 in (Hashes)
-    | join DeviceFileCertificateInfo on SHA1);
+    | join kind=inner DeviceFileCertificateInfo on SHA1);
 Files
 ```
