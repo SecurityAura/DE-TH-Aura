@@ -67,9 +67,9 @@ union DeviceProcessEvents, DeviceImageLoadEvents, DeviceFileEvents
 ```
 ### Defender for Endpoint (MDE) via DeviceProcessEvents ###
 ```KQL
-let CertReport = (externaldata(CRHash:string, CRMalware: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
+let CertReport = (externaldata(CRHash:string, CRMalware: string, CRMalwareType: string, CRMalwareNotes: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
 [@"https://certgraveyard.org/api/download_csv"]
-with (format=csv))
+with (format=csv, ignoreFirstRecord=true))
 | extend CRSerial = tolower(CRSerial);
 DeviceProcessEvents
 | where FolderPath matches regex @"(?i):\\Users\\[^\\]+\\Downloads\\.*(exe|dll|msi|msix)$"
@@ -84,9 +84,9 @@ DeviceProcessEvents
 ```
 ### Defender for Endpoint (MDE) via DeviceImageLoadEvents ###
 ```KQL
-let CertReport = (externaldata(CRHash:string, CRMalware: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
+let CertReport = (externaldata(CRHash:string, CRMalware: string, CRMalwareType: string, CRMalwareNotes: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
 [@"https://certgraveyard.org/api/download_csv"]
-with (format=csv))
+with (format=csv, ignoreFirstRecord=true))
 | extend CRSerial = tolower(CRSerial);
 DeviceImageLoadEvents
 | where FolderPath matches regex @"(?i):\\Users\\[^\\]+\\Downloads\\.*(exe|dll|msi|msix)$"
@@ -101,9 +101,9 @@ DeviceImageLoadEvents
 ```
 ### Defender for Endpoint (MDE) via DeviceFileEvents ###
 ```KQL
-let CertReport = (externaldata(CRHash:string, CRMalware: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
+let CertReport = (externaldata(CRHash:string, CRMalware: string, CRMalwareType: string, CRMalwareNotes: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
 [@"https://certgraveyard.org/api/download_csv"]
-with (format=csv))
+with (format=csv, ignoreFirstRecord=true))
 | extend CRSerial = tolower(CRSerial);
 DeviceFileEvents
 | where FolderPath matches regex @"(?i):\\Users\\[^\\]+\\Downloads\\.*(exe|dll|msi|msix)$"
@@ -118,9 +118,9 @@ DeviceFileEvents
 ```
 ### Defender for Endpoint (MDE) via DeviceFileCertificateInfo, DeviceProcessEvents, DeviceEvents
 ```KQL
-let CertReport = (externaldata(CRHash: string, CRMalware: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
-    [@"https://certgraveyard.org/api/download_csv"]
-    with (format=csv))
+let CertReport = (externaldata(CRHash:string, CRMalware: string, CRMalwareType: string, CRMalwareNotes: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
+[@"https://certgraveyard.org/api/download_csv"]
+with (format=csv, ignoreFirstRecord=true))
     | extend CRSerial = tolower(CRSerial);
 let PresentCertificateSigners = materialize(
     DeviceFileCertificateInfo
@@ -143,9 +143,9 @@ Files
 ## Microsoft Sentinel ##
 ### Defender for Endpoint (MDE) via DeviceProcessEvents, DeviceImageLoadEvents, DeviceFileEvents (ALL-IN-ONE QUERY) ###
 ```KQL
-let CertReport = (externaldata(CRHash:string, CRMalware: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
+let CertReport = (externaldata(CRHash:string, CRMalware: string, CRMalwareType: string, CRMalwareNotes: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
 [@"https://certgraveyard.org/api/download_csv"]
-with (format=csv))
+with (format=csv, ignoreFirstRecord=true))
 | extend CRSerial = tolower(CRSerial);
 union DeviceProcessEvents, DeviceImageLoadEvents, DeviceFileEvents
 | where FolderPath matches regex @"(?i):\\Users\\[^\\]+\\Downloads\\.*(exe|dll|msi|msix)$"
@@ -160,9 +160,9 @@ union DeviceProcessEvents, DeviceImageLoadEvents, DeviceFileEvents
 ```
 ### Defender for Endpoint (MDE) via DeviceProcessEvents ###
 ```KQL
-let CertReport = (externaldata(CRHash:string, CRMalware: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
+let CertReport = (externaldata(CRHash:string, CRMalware: string, CRMalwareType: string, CRMalwareNotes: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
 [@"https://certgraveyard.org/api/download_csv"]
-with (format=csv))
+with (format=csv, ignoreFirstRecord=true))
 | extend CRSerial = tolower(CRSerial);
 DeviceProcessEvents
 | where FolderPath matches regex @"(?i):\\Users\\[^\\]+\\Downloads\\.*(exe|dll|msi|msix)$"
@@ -177,9 +177,9 @@ DeviceProcessEvents
 ```
 ### Defender for Endpoint (MDE) via DeviceImageLoadEvents ###
 ```KQL
-let CertReport = (externaldata(CRHash:string, CRMalware: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
+let CertReport = (externaldata(CRHash:string, CRMalware: string, CRMalwareType: string, CRMalwareNotes: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
 [@"https://certgraveyard.org/api/download_csv"]
-with (format=csv))
+with (format=csv, ignoreFirstRecord=true))
 | extend CRSerial = tolower(CRSerial);
 DeviceImageLoadEvents
 | where FolderPath matches regex @"(?i):\\Users\\[^\\]+\\Downloads\\.*(exe|dll|msi|msix)$"
@@ -194,9 +194,9 @@ DeviceImageLoadEvents
 ```
 ### Defender for Endpoint (MDE) via DeviceFileEvents ###
 ```KQL
-let CertReport = (externaldata(CRHash:string, CRMalware: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
+let CertReport = (externaldata(CRHash:string, CRMalware: string, CRMalwareType: string, CRMalwareNotes: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
 [@"https://certgraveyard.org/api/download_csv"]
-with (format=csv))
+with (format=csv, ignoreFirstRecord=true))
 | extend CRSerial = tolower(CRSerial);
 DeviceFileEvents
 | where FolderPath matches regex @"(?i):\\Users\\[^\\]+\\Downloads\\.*(exe|dll|msi|msix)$"
@@ -211,9 +211,9 @@ DeviceFileEvents
 ```
 ### Defender for Endpoint (MDE) via DeviceFileCertificateInfo, DeviceProcessEvents, DeviceEvents
 ```KQL
-let CertReport = (externaldata(CRHash: string, CRMalware: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
-    [@"https://certgraveyard.org/api/download_csv"]
-    with (format=csv))
+let CertReport = (externaldata(CRHash:string, CRMalware: string, CRMalwareType: string, CRMalwareNotes: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
+[@"https://certgraveyard.org/api/download_csv"]
+with (format=csv, ignoreFirstRecord=true))
     | extend CRSerial = tolower(CRSerial);
 let PresentCertificateSigners = materialize(
     DeviceFileCertificateInfo
