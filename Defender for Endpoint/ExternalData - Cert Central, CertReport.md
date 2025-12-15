@@ -50,9 +50,9 @@ Since "matches regex" is used to identify files at certain paths, depending on t
 ## Defender XDR ##
 ### Defender for Endpoint (MDE) via DeviceProcessEvents, DeviceImageLoadEvents, DeviceFileEvents (ALL-IN-ONE QUERY) ###
 ```KQL
-let CertReport = (externaldata(CRHash:string, CRMalware: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
+let CertReport = (externaldata(CRHash:string, CRMalware: string, CRMalwareType: string, CRMalwareNotes: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
 [@"https://certgraveyard.org/api/download_csv"]
-with (format=csv))
+with (format=csv, ignoreFirstRecord=true))
 | extend CRSerial = tolower(CRSerial);
 union DeviceProcessEvents, DeviceImageLoadEvents, DeviceFileEvents
 | where FolderPath matches regex @"(?i):\\Users\\[^\\]+\\Downloads\\.*(exe|dll|msi|msix)$"
