@@ -50,7 +50,7 @@ Since "matches regex" is used to identify files at certain paths, depending on t
 ## Defender XDR ##
 ### Defender for Endpoint (MDE) via DeviceProcessEvents, DeviceImageLoadEvents, DeviceFileEvents (ALL-IN-ONE QUERY) ###
 ```KQL
-let CertReport = (externaldata(CRHash:string, CRMalware: string, CRMalwareType: string, CRMalwareNotes: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
+let CertReport = (externaldata(CRHash:string, CRMalware: string, CRMalwareType: string, CRMalwareNotes: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string, CRTBSMD5: string, CRTBSSHA1: string, CRTBSSHA256: string, CRTBSSHA384:string)
 [@"https://certgraveyard.org/api/download_csv"]
 with (format=csv, ignoreFirstRecord=true))
 | extend CRSerial = tolower(CRSerial);
@@ -67,7 +67,7 @@ union DeviceProcessEvents, DeviceImageLoadEvents, DeviceFileEvents
 ```
 ### Defender for Endpoint (MDE) via DeviceProcessEvents ###
 ```KQL
-let CertReport = (externaldata(CRHash:string, CRMalware: string, CRMalwareType: string, CRMalwareNotes: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
+let CertReport = (externaldata(CRHash:string, CRMalware: string, CRMalwareType: string, CRMalwareNotes: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string, CRTBSMD5: string, CRTBSSHA1: string, CRTBSSHA256: string, CRTBSSHA384:string)
 [@"https://certgraveyard.org/api/download_csv"]
 with (format=csv, ignoreFirstRecord=true))
 | extend CRSerial = tolower(CRSerial);
@@ -84,7 +84,7 @@ DeviceProcessEvents
 ```
 ### Defender for Endpoint (MDE) via DeviceImageLoadEvents ###
 ```KQL
-let CertReport = (externaldata(CRHash:string, CRMalware: string, CRMalwareType: string, CRMalwareNotes: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
+let CertReport = (externaldata(CRHash:string, CRMalware: string, CRMalwareType: string, CRMalwareNotes: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string, CRTBSMD5: string, CRTBSSHA1: string, CRTBSSHA256: string, CRTBSSHA384:string)
 [@"https://certgraveyard.org/api/download_csv"]
 with (format=csv, ignoreFirstRecord=true))
 | extend CRSerial = tolower(CRSerial);
@@ -101,7 +101,7 @@ DeviceImageLoadEvents
 ```
 ### Defender for Endpoint (MDE) via DeviceFileEvents ###
 ```KQL
-let CertReport = (externaldata(CRHash:string, CRMalware: string, CRMalwareType: string, CRMalwareNotes: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
+let CertReport = (externaldata(CRHash:string, CRMalware: string, CRMalwareType: string, CRMalwareNotes: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string, CRTBSMD5: string, CRTBSSHA1: string, CRTBSSHA256: string, CRTBSSHA384:string)
 [@"https://certgraveyard.org/api/download_csv"]
 with (format=csv, ignoreFirstRecord=true))
 | extend CRSerial = tolower(CRSerial);
@@ -118,7 +118,7 @@ DeviceFileEvents
 ```
 ### Defender for Endpoint (MDE) via DeviceFileCertificateInfo, DeviceProcessEvents, DeviceEvents
 ```KQL
-let CertReport = (externaldata(CRHash:string, CRMalware: string, CRMalwareType: string, CRMalwareNotes: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
+let CertReport = (externaldata(CRHash:string, CRMalware: string, CRMalwareType: string, CRMalwareNotes: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string, CRTBSMD5: string, CRTBSSHA1: string, CRTBSSHA256: string, CRTBSSHA384:string)
 [@"https://certgraveyard.org/api/download_csv"]
 with (format=csv, ignoreFirstRecord=true))
     | extend CRSerial = tolower(CRSerial);
@@ -143,7 +143,7 @@ Files
 ## Microsoft Sentinel ##
 ### Defender for Endpoint (MDE) via DeviceProcessEvents, DeviceImageLoadEvents, DeviceFileEvents (ALL-IN-ONE QUERY) ###
 ```KQL
-let CertReport = (externaldata(CRHash:string, CRMalware: string, CRMalwareType: string, CRMalwareNotes: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
+let CertReport = (externaldata(CRHash:string, CRMalware: string, CRMalwareType: string, CRMalwareNotes: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string, CRTBSMD5: string, CRTBSSHA1: string, CRTBSSHA256: string, CRTBSSHA384:string)
 [@"https://certgraveyard.org/api/download_csv"]
 with (format=csv, ignoreFirstRecord=true))
 | extend CRSerial = tolower(CRSerial);
@@ -160,7 +160,7 @@ union DeviceProcessEvents, DeviceImageLoadEvents, DeviceFileEvents
 ```
 ### Defender for Endpoint (MDE) via DeviceProcessEvents ###
 ```KQL
-let CertReport = (externaldata(CRHash:string, CRMalware: string, CRMalwareType: string, CRMalwareNotes: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
+let CertReport = (externaldata(CRHash:string, CRMalware: string, CRMalwareType: string, CRMalwareNotes: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string, CRTBSMD5: string, CRTBSSHA1: string, CRTBSSHA256: string, CRTBSSHA384:string)
 [@"https://certgraveyard.org/api/download_csv"]
 with (format=csv, ignoreFirstRecord=true))
 | extend CRSerial = tolower(CRSerial);
@@ -177,7 +177,7 @@ DeviceProcessEvents
 ```
 ### Defender for Endpoint (MDE) via DeviceImageLoadEvents ###
 ```KQL
-let CertReport = (externaldata(CRHash:string, CRMalware: string, CRMalwareType: string, CRMalwareNotes: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
+let CertReport = (externaldata(CRHash:string, CRMalware: string, CRMalwareType: string, CRMalwareNotes: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string, CRTBSMD5: string, CRTBSSHA1: string, CRTBSSHA256: string, CRTBSSHA384:string)
 [@"https://certgraveyard.org/api/download_csv"]
 with (format=csv, ignoreFirstRecord=true))
 | extend CRSerial = tolower(CRSerial);
@@ -194,7 +194,7 @@ DeviceImageLoadEvents
 ```
 ### Defender for Endpoint (MDE) via DeviceFileEvents ###
 ```KQL
-let CertReport = (externaldata(CRHash:string, CRMalware: string, CRMalwareType: string, CRMalwareNotes: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
+let CertReport = (externaldata(CRHash:string, CRMalware: string, CRMalwareType: string, CRMalwareNotes: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string, CRTBSMD5: string, CRTBSSHA1: string, CRTBSSHA256: string, CRTBSSHA384:string)
 [@"https://certgraveyard.org/api/download_csv"]
 with (format=csv, ignoreFirstRecord=true))
 | extend CRSerial = tolower(CRSerial);
@@ -211,7 +211,7 @@ DeviceFileEvents
 ```
 ### Defender for Endpoint (MDE) via DeviceFileCertificateInfo, DeviceProcessEvents, DeviceEvents
 ```KQL
-let CertReport = (externaldata(CRHash:string, CRMalware: string, CRMalwareType: string, CRMalwareNotes: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string)
+let CertReport = (externaldata(CRHash:string, CRMalware: string, CRMalwareType: string, CRMalwareNotes: string, CRSigner: string, CRIssuerShort: string, CRIssuer: string, CRSerial: string, CRThumbprint: string, CRValidFrom: datetime, CRValidTo: datetime, CRCountry: string, CRState: string, CRLocality: string, CREmail: string, CRRDNSerialNumber: string, CRTBSMD5: string, CRTBSSHA1: string, CRTBSSHA256: string, CRTBSSHA384:string)
 [@"https://certgraveyard.org/api/download_csv"]
 with (format=csv, ignoreFirstRecord=true))
     | extend CRSerial = tolower(CRSerial);
