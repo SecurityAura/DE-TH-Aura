@@ -8,7 +8,8 @@
 |---|---|
 | 2025/06/17 | Initial version |
 | 2025/08/24 | Added the wide DeviceFileCertificateInfo detection/hunt |
-| 2025/12/15 | Replace references to Cert Central (certcentral.org) with Cert Graveyard (certgraveyard.org)
+| 2025/12/15 | Replace references to Cert Central (certcentral.org) with Cert Graveyard (certgraveyard.org) |
+| 2026/06/23 | Updated the CSV URL |
 
 #### MITRE ATT&CK Technique(s)
 
